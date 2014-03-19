@@ -63,7 +63,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl4-Iq-VOO">
-                                        <rect key="frame" x="113" y="0.0" width="94" height="96"/>
+                                        <rect key="frame" x="113" y="10" width="94" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="camera-ui-camera-button-dimmed.png">
@@ -77,6 +77,13 @@
                                             <action selector="captureFrame:" destination="ZOU-JI-eN6" eventType="touchUpInside" id="I1k-4m-ryY"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capture a single digit within bounding box " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsa-Su-aSM">
+                                        <rect key="frame" x="-4" y="3" width="329" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -139,24 +146,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-lr-BC6" userLabel="border">
-                                <rect key="frame" x="0.0" y="127" width="320" height="301"/>
+                                <rect key="frame" x="0.0" y="118" width="320" height="301"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="150"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFb-dH-JCn" userLabel="result">
-                                <rect key="frame" x="0.0" y="128" width="320" height="299"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="299"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="150"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="topRight" fixedFrame="YES" image="draw-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="fq4-zz-OuK">
-                                <rect key="frame" x="221" y="91" width="92" height="68"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEj-vh-mdc" userLabel="cameraImage">
-                                <rect key="frame" x="0.0" y="128" width="320" height="299"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="299"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Draw or capture a single digit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xis-gu-wrA">
+                                <rect key="frame" x="0.0" y="94" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -195,7 +206,6 @@
                         <outlet property="cameraImage" destination="eEj-vh-mdc" id="nUu-U3-83L"/>
                         <outlet property="classifyButton" destination="8IZ-A6-trS" id="1pl-Ad-bCc"/>
                         <outlet property="debugOutput" destination="opD-O0-Vea" id="zUv-h4-mSs"/>
-                        <outlet property="drawIcon" destination="fq4-zz-OuK" id="Cy4-xf-kUS"/>
                         <outlet property="resetButton" destination="Lne-5g-Y1B" id="jXb-9V-aSF"/>
                         <outlet property="resultLabel" destination="nFb-dH-JCn" id="QeQ-6c-UPB"/>
                     </connections>
@@ -313,7 +323,6 @@ This prototype is a proof-of-concept for intelligent machine learning using deep
     <resources>
         <image name="camera-ui-camera-button-dimmed.png" width="90" height="90"/>
         <image name="camera-ui-camera-button-highlighted.png" width="81" height="81"/>
-        <image name="draw-arrow.png" width="70" height="57"/>
         <image name="icon-flash" width="81" height="81"/>
     </resources>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

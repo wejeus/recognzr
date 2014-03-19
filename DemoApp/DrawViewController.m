@@ -36,7 +36,7 @@ BOOL isShowingResultView = NO;
     
     NSLog(@"w: %f h: %f", screenWidth, screenHeight);
 
-    drawScreen = [[LineDrawingView alloc] initWithFrame:CGRectMake(0, 128, 320, 299)];
+    drawScreen = [[LineDrawingView alloc] initWithFrame:CGRectMake(0, 119, 320, 299)];
 
     self.borderLabel.layer.borderColor = [[UIColor alloc] initWithRed:0.2824 green:0.2824 blue:0.2824 alpha:1].CGColor;
     self.borderLabel.layer.borderWidth = 2.0f;
