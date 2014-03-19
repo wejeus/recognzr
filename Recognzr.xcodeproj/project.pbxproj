@@ -1,0 +1,1426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D52868CD18D98E0C00C20A78 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52868CC18D98E0C00C20A78 /* opencv2.framework */; };
+		D53BCAB9178C2BDE00DF6373 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53BCAB8178C2BDE00DF6373 /* UIKit.framework */; };
+		D53BCABB178C2BDE00DF6373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53BCABA178C2BDE00DF6373 /* Foundation.framework */; };
+		D53BCABD178C2BDE00DF6373 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53BCABC178C2BDE00DF6373 /* CoreGraphics.framework */; };
+		D53BCAC3178C2BDE00DF6373 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53BCAC1178C2BDE00DF6373 /* InfoPlist.strings */; };
+		D53BCAC5178C2BDE00DF6373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BCAC4178C2BDE00DF6373 /* main.m */; };
+		D55BB7E31816B994006B6624 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BB7E11816B994006B6624 /* MainStoryboard.storyboard */; };
+		D56689A71816BAC000034273 /* xor.lua in Resources */ = {isa = PBXBuildFile; fileRef = D56689A41816BAC000034273 /* xor.lua */; };
+		D56689A81816BAC000034273 /* main.lua in Resources */ = {isa = PBXBuildFile; fileRef = D56689A51816BAC000034273 /* main.lua */; };
+		D56689A91816BAC000034273 /* digits.lua in Resources */ = {isa = PBXBuildFile; fileRef = D56689A61816BAC000034273 /* digits.lua */; };
+		D56689AD1816BC0400034273 /* GLESImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D56689AB1816BC0400034273 /* GLESImageView.mm */; };
+		D56689AF1816BC1500034273 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56689AE1816BC1500034273 /* OpenGLES.framework */; };
+		D56AED0A1816B43E00C0A585 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AECEB1816B43E00C0A585 /* DrawViewController.m */; };
+		D56AED0B1816B43E00C0A585 /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = D56AECEC1816B43E00C0A585 /* ImageProcessor.mm */; };
+		D56AED0C1816B43E00C0A585 /* CameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D56AECEE1816B43E00C0A585 /* CameraViewController.mm */; };
+		D56AED0D1816B43E00C0A585 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D56AECEF1816B43E00C0A585 /* AppDelegate.mm */; };
+		D56AED0E1816B43E00C0A585 /* LineDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AECF01816B43E00C0A585 /* LineDrawingView.m */; };
+		D56AED131816B43E00C0A585 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AECFB1816B43E00C0A585 /* InfoViewController.m */; };
+		D56AED151816B43E00C0A585 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AECFD1816B43E00C0A585 /* ViewController.m */; };
+		D56AED181816B43E00C0A585 /* AppVars.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AED061816B43E00C0A585 /* AppVars.m */; };
+		D56AED191816B43E00C0A585 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AED081816B43E00C0A585 /* StartupViewController.m */; };
+		D571F0C818D87EBE0032CC7C /* AttributionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D571F0C718D87EBE0032CC7C /* AttributionsViewController.m */; };
+		D571F0CA18D87F2E0032CC7C /* Attributions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D571F0C918D87F2E0032CC7C /* Attributions.txt */; };
+		D571F0CC18D886430032CC7C /* framework in Resources */ = {isa = PBXBuildFile; fileRef = D571F0CB18D886430032CC7C /* framework */; };
+		D571F16418D886520032CC7C /* libgraphcuts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D018D886520032CC7C /* libgraphcuts.a */; };
+		D571F16518D886520032CC7C /* libimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D118D886520032CC7C /* libimage.a */; };
+		D571F16618D886520032CC7C /* libimgraph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D218D886520032CC7C /* libimgraph.a */; };
+		D571F16718D886520032CC7C /* libluaT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D318D886520032CC7C /* libluaT.a */; };
+		D571F16818D886520032CC7C /* libnn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D418D886520032CC7C /* libnn.a */; };
+		D571F16918D886520032CC7C /* libnnx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D518D886520032CC7C /* libnnx.a */; };
+		D571F16A18D886520032CC7C /* libpink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D618D886520032CC7C /* libpink.a */; };
+		D571F16B18D886520032CC7C /* libTH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D718D886520032CC7C /* libTH.a */; };
+		D571F16C18D886520032CC7C /* libtorch-lua-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D818D886520032CC7C /* libtorch-lua-static.a */; };
+		D571F16D18D886520032CC7C /* libtorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D571F0D918D886520032CC7C /* libtorch.a */; };
+		D571F16E18D886520032CC7C /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0DC18D886520032CC7C /* init.lua */; };
+		D571F16F18D886520032CC7C /* inline.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0DD18D886520032CC7C /* inline.lua */; };
+		D571F17018D886520032CC7C /* search.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0DE18D886520032CC7C /* search.lua */; };
+		D571F17118D886520032CC7C /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E018D886520032CC7C /* init.lua */; };
+		D571F17218D886520032CC7C /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E218D886520032CC7C /* init.lua */; };
+		D571F17318D886520032CC7C /* Abs.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E418D886520032CC7C /* Abs.lua */; };
+		D571F17418D886520032CC7C /* AbsCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E518D886520032CC7C /* AbsCriterion.lua */; };
+		D571F17518D886520032CC7C /* Add.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E618D886520032CC7C /* Add.lua */; };
+		D571F17618D886520032CC7C /* CAddTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E718D886520032CC7C /* CAddTable.lua */; };
+		D571F17718D886520032CC7C /* CDivTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E818D886520032CC7C /* CDivTable.lua */; };
+		D571F17818D886520032CC7C /* ClassNLLCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0E918D886520032CC7C /* ClassNLLCriterion.lua */; };
+		D571F17918D886520032CC7C /* CMul.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0EA18D886520032CC7C /* CMul.lua */; };
+		D571F17A18D886520032CC7C /* CMulTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0EB18D886520032CC7C /* CMulTable.lua */; };
+		D571F17B18D886520032CC7C /* Concat.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0EC18D886520032CC7C /* Concat.lua */; };
+		D571F17C18D886520032CC7C /* ConcatTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0ED18D886520032CC7C /* ConcatTable.lua */; };
+		D571F17D18D886520032CC7C /* Copy.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0EE18D886520032CC7C /* Copy.lua */; };
+		D571F17E18D886520032CC7C /* CosineDistance.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0EF18D886520032CC7C /* CosineDistance.lua */; };
+		D571F17F18D886520032CC7C /* CosineEmbeddingCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F018D886520032CC7C /* CosineEmbeddingCriterion.lua */; };
+		D571F18018D886520032CC7C /* Criterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F118D886520032CC7C /* Criterion.lua */; };
+		D571F18118D886520032CC7C /* CriterionTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F218D886520032CC7C /* CriterionTable.lua */; };
+		D571F18218D886520032CC7C /* CSubTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F318D886520032CC7C /* CSubTable.lua */; };
+		D571F18318D886520032CC7C /* DistKLDivCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F418D886520032CC7C /* DistKLDivCriterion.lua */; };
+		D571F18418D886520032CC7C /* DotProduct.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F518D886520032CC7C /* DotProduct.lua */; };
+		D571F18518D886520032CC7C /* Euclidean.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F618D886520032CC7C /* Euclidean.lua */; };
+		D571F18618D886520032CC7C /* Exp.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F718D886520032CC7C /* Exp.lua */; };
+		D571F18718D886520032CC7C /* HardShrink.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F818D886520032CC7C /* HardShrink.lua */; };
+		D571F18818D886520032CC7C /* HardTanh.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0F918D886520032CC7C /* HardTanh.lua */; };
+		D571F18918D886520032CC7C /* hessian.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0FA18D886520032CC7C /* hessian.lua */; };
+		D571F18A18D886520032CC7C /* HingeEmbeddingCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0FB18D886520032CC7C /* HingeEmbeddingCriterion.lua */; };
+		D571F18B18D886520032CC7C /* Identity.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0FC18D886520032CC7C /* Identity.lua */; };
+		D571F18C18D886520032CC7C /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0FD18D886520032CC7C /* init.lua */; };
+		D571F18D18D886520032CC7C /* Jacobian.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0FE18D886520032CC7C /* Jacobian.lua */; };
+		D571F18E18D886520032CC7C /* JoinTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F0FF18D886520032CC7C /* JoinTable.lua */; };
+		D571F18F18D886520032CC7C /* L1Cost.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10018D886520032CC7C /* L1Cost.lua */; };
+		D571F19018D886520032CC7C /* L1HingeEmbeddingCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10118D886520032CC7C /* L1HingeEmbeddingCriterion.lua */; };
+		D571F19118D886520032CC7C /* Linear.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10218D886520032CC7C /* Linear.lua */; };
+		D571F19218D886520032CC7C /* Log.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10318D886520032CC7C /* Log.lua */; };
+		D571F19318D886520032CC7C /* LogSigmoid.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10418D886520032CC7C /* LogSigmoid.lua */; };
+		D571F19418D886520032CC7C /* LogSoftMax.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10518D886520032CC7C /* LogSoftMax.lua */; };
+		D571F19518D886520032CC7C /* LookupTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10618D886520032CC7C /* LookupTable.lua */; };
+		D571F19618D886520032CC7C /* MarginCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10718D886520032CC7C /* MarginCriterion.lua */; };
+		D571F19718D886520032CC7C /* MarginRankingCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10818D886520032CC7C /* MarginRankingCriterion.lua */; };
+		D571F19818D886520032CC7C /* Max.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10918D886520032CC7C /* Max.lua */; };
+		D571F19918D886520032CC7C /* Mean.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10A18D886520032CC7C /* Mean.lua */; };
+		D571F19A18D886520032CC7C /* Min.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10B18D886520032CC7C /* Min.lua */; };
+		D571F19B18D886520032CC7C /* Module.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10C18D886520032CC7C /* Module.lua */; };
+		D571F19C18D886520032CC7C /* MSECriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10D18D886520032CC7C /* MSECriterion.lua */; };
+		D571F19D18D886520032CC7C /* Mul.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10E18D886520032CC7C /* Mul.lua */; };
+		D571F19E18D886520032CC7C /* MultiCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F10F18D886520032CC7C /* MultiCriterion.lua */; };
+		D571F19F18D886520032CC7C /* MultiLabelMarginCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11018D886520032CC7C /* MultiLabelMarginCriterion.lua */; };
+		D571F1A018D886520032CC7C /* MultiMarginCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11118D886520032CC7C /* MultiMarginCriterion.lua */; };
+		D571F1A118D886520032CC7C /* Narrow.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11218D886520032CC7C /* Narrow.lua */; };
+		D571F1A218D886520032CC7C /* PairwiseDistance.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11318D886520032CC7C /* PairwiseDistance.lua */; };
+		D571F1A318D886520032CC7C /* Parallel.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11418D886520032CC7C /* Parallel.lua */; };
+		D571F1A418D886520032CC7C /* ParallelTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11518D886520032CC7C /* ParallelTable.lua */; };
+		D571F1A518D886520032CC7C /* Power.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11618D886520032CC7C /* Power.lua */; };
+		D571F1A618D886520032CC7C /* Replicate.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11718D886520032CC7C /* Replicate.lua */; };
+		D571F1A718D886520032CC7C /* Reshape.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11818D886520032CC7C /* Reshape.lua */; };
+		D571F1A818D886520032CC7C /* Select.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11918D886520032CC7C /* Select.lua */; };
+		D571F1A918D886520032CC7C /* Sequential.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11A18D886520032CC7C /* Sequential.lua */; };
+		D571F1AA18D886520032CC7C /* Sigmoid.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11B18D886520032CC7C /* Sigmoid.lua */; };
+		D571F1AB18D886520032CC7C /* SoftMax.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11C18D886520032CC7C /* SoftMax.lua */; };
+		D571F1AC18D886520032CC7C /* SoftMin.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11D18D886520032CC7C /* SoftMin.lua */; };
+		D571F1AD18D886520032CC7C /* SoftPlus.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11E18D886520032CC7C /* SoftPlus.lua */; };
+		D571F1AE18D886520032CC7C /* SoftShrink.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F11F18D886520032CC7C /* SoftShrink.lua */; };
+		D571F1AF18D886520032CC7C /* SoftSign.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12018D886520032CC7C /* SoftSign.lua */; };
+		D571F1B018D886520032CC7C /* SparseLinear.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12118D886520032CC7C /* SparseLinear.lua */; };
+		D571F1B118D886520032CC7C /* SpatialContrastiveNormalization.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12218D886520032CC7C /* SpatialContrastiveNormalization.lua */; };
+		D571F1B218D886520032CC7C /* SpatialConvolution.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12318D886520032CC7C /* SpatialConvolution.lua */; };
+		D571F1B318D886520032CC7C /* SpatialConvolutionMap.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12418D886520032CC7C /* SpatialConvolutionMap.lua */; };
+		D571F1B418D886520032CC7C /* SpatialConvolutionMM.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12518D886520032CC7C /* SpatialConvolutionMM.lua */; };
+		D571F1B518D886520032CC7C /* SpatialDivisiveNormalization.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12618D886520032CC7C /* SpatialDivisiveNormalization.lua */; };
+		D571F1B618D886520032CC7C /* SpatialFullConvolution.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12718D886520032CC7C /* SpatialFullConvolution.lua */; };
+		D571F1B718D886520032CC7C /* SpatialFullConvolutionMap.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12818D886520032CC7C /* SpatialFullConvolutionMap.lua */; };
+		D571F1B818D886520032CC7C /* SpatialLPPooling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12918D886520032CC7C /* SpatialLPPooling.lua */; };
+		D571F1B918D886520032CC7C /* SpatialMaxPooling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12A18D886520032CC7C /* SpatialMaxPooling.lua */; };
+		D571F1BA18D886520032CC7C /* SpatialSubSampling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12B18D886520032CC7C /* SpatialSubSampling.lua */; };
+		D571F1BB18D886520032CC7C /* SpatialSubtractiveNormalization.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12C18D886520032CC7C /* SpatialSubtractiveNormalization.lua */; };
+		D571F1BC18D886520032CC7C /* SpatialZeroPadding.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12D18D886520032CC7C /* SpatialZeroPadding.lua */; };
+		D571F1BD18D886520032CC7C /* SplitTable.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12E18D886520032CC7C /* SplitTable.lua */; };
+		D571F1BE18D886520032CC7C /* Sqrt.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F12F18D886520032CC7C /* Sqrt.lua */; };
+		D571F1BF18D886520032CC7C /* Square.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13018D886520032CC7C /* Square.lua */; };
+		D571F1C018D886520032CC7C /* StochasticGradient.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13118D886520032CC7C /* StochasticGradient.lua */; };
+		D571F1C118D886520032CC7C /* Sum.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13218D886520032CC7C /* Sum.lua */; };
+		D571F1C218D886520032CC7C /* Tanh.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13318D886520032CC7C /* Tanh.lua */; };
+		D571F1C318D886520032CC7C /* TanhShrink.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13418D886520032CC7C /* TanhShrink.lua */; };
+		D571F1C418D886520032CC7C /* TemporalConvolution.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13518D886520032CC7C /* TemporalConvolution.lua */; };
+		D571F1C518D886520032CC7C /* TemporalMaxPooling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13618D886520032CC7C /* TemporalMaxPooling.lua */; };
+		D571F1C618D886520032CC7C /* TemporalSubSampling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13718D886520032CC7C /* TemporalSubSampling.lua */; };
+		D571F1C718D886520032CC7C /* Threshold.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13818D886520032CC7C /* Threshold.lua */; };
+		D571F1C818D886520032CC7C /* VolumetricConvolution.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13918D886520032CC7C /* VolumetricConvolution.lua */; };
+		D571F1C918D886520032CC7C /* WeightedEuclidean.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13A18D886520032CC7C /* WeightedEuclidean.lua */; };
+		D571F1CA18D886520032CC7C /* WeightedMSECriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13B18D886520032CC7C /* WeightedMSECriterion.lua */; };
+		D571F1CB18D886520032CC7C /* DataList.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13D18D886520032CC7C /* DataList.lua */; };
+		D571F1CC18D886520032CC7C /* DataSet.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13E18D886520032CC7C /* DataSet.lua */; };
+		D571F1CD18D886520032CC7C /* DataSetLabelMe.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F13F18D886520032CC7C /* DataSetLabelMe.lua */; };
+		D571F1CE18D886520032CC7C /* DataSetSamplingPascal.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14018D886520032CC7C /* DataSetSamplingPascal.lua */; };
+		D571F1CF18D886520032CC7C /* DistMarginCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14118D886520032CC7C /* DistMarginCriterion.lua */; };
+		D571F1D018D886520032CC7C /* DistNLLCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14218D886520032CC7C /* DistNLLCriterion.lua */; };
+		D571F1D118D886520032CC7C /* FunctionWrapper.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14318D886520032CC7C /* FunctionWrapper.lua */; };
+		D571F1D218D886520032CC7C /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14418D886520032CC7C /* init.lua */; };
+		D571F1D318D886520032CC7C /* Probe.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14518D886520032CC7C /* Probe.lua */; };
+		D571F1D418D886520032CC7C /* SparseCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14618D886520032CC7C /* SparseCriterion.lua */; };
+		D571F1D518D886520032CC7C /* SpatialClassifier.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14718D886520032CC7C /* SpatialClassifier.lua */; };
+		D571F1D618D886520032CC7C /* SpatialColorTransform.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14818D886520032CC7C /* SpatialColorTransform.lua */; };
+		D571F1D718D886520032CC7C /* SpatialDownSampling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14918D886520032CC7C /* SpatialDownSampling.lua */; };
+		D571F1D818D886520032CC7C /* SpatialFovea.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14A18D886520032CC7C /* SpatialFovea.lua */; };
+		D571F1D918D886520032CC7C /* SpatialGraph.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14B18D886520032CC7C /* SpatialGraph.lua */; };
+		D571F1DA18D886520032CC7C /* SpatialLinear.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14C18D886520032CC7C /* SpatialLinear.lua */; };
+		D571F1DB18D886520032CC7C /* SpatialMatching.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14D18D886520032CC7C /* SpatialMatching.lua */; };
+		D571F1DC18D886520032CC7C /* SpatialMaxSampling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14E18D886520032CC7C /* SpatialMaxSampling.lua */; };
+		D571F1DD18D886520032CC7C /* SpatialNormalization.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F14F18D886520032CC7C /* SpatialNormalization.lua */; };
+		D571F1DE18D886520032CC7C /* SpatialPadding.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15018D886520032CC7C /* SpatialPadding.lua */; };
+		D571F1DF18D886520032CC7C /* SpatialPyramid.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15118D886520032CC7C /* SpatialPyramid.lua */; };
+		D571F1E018D886520032CC7C /* SpatialRadialMatching.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15218D886520032CC7C /* SpatialRadialMatching.lua */; };
+		D571F1E118D886520032CC7C /* SpatialRecursiveFovea.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15318D886520032CC7C /* SpatialRecursiveFovea.lua */; };
+		D571F1E218D886520032CC7C /* SpatialReSampling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15418D886520032CC7C /* SpatialReSampling.lua */; };
+		D571F1E318D886520032CC7C /* SpatialReSamplingEx.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15518D886520032CC7C /* SpatialReSamplingEx.lua */; };
+		D571F1E418D886520032CC7C /* SpatialSparseCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15618D886520032CC7C /* SpatialSparseCriterion.lua */; };
+		D571F1E518D886520032CC7C /* SpatialUpSampling.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15718D886520032CC7C /* SpatialUpSampling.lua */; };
+		D571F1E618D886520032CC7C /* SuperCriterion.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15818D886520032CC7C /* SuperCriterion.lua */; };
+		D571F1E718D886520032CC7C /* Tic.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15918D886520032CC7C /* Tic.lua */; };
+		D571F1E818D886520032CC7C /* Toc.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15A18D886520032CC7C /* Toc.lua */; };
+		D571F1E918D886520032CC7C /* CmdLine.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15C18D886520032CC7C /* CmdLine.lua */; };
+		D571F1EA18D886520032CC7C /* File.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15D18D886520032CC7C /* File.lua */; };
+		D571F1EB18D886520032CC7C /* hist.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15E18D886520032CC7C /* hist.lua */; };
+		D571F1EC18D886520032CC7C /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F15F18D886520032CC7C /* init.lua */; };
+		D571F1ED18D886520032CC7C /* random.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F16018D886520032CC7C /* random.lua */; };
+		D571F1EE18D886520032CC7C /* Tensor.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F16118D886520032CC7C /* Tensor.lua */; };
+		D571F1EF18D886520032CC7C /* TensorMath.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F16218D886520032CC7C /* TensorMath.lua */; };
+		D571F1F018D886520032CC7C /* Tester.lua in Resources */ = {isa = PBXBuildFile; fileRef = D571F16318D886520032CC7C /* Tester.lua */; };
+		D571F22418D887480032CC7C /* THBlas.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F1FC18D887480032CC7C /* THBlas.c */; };
+		D571F22518D887480032CC7C /* THLapack.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F1FE18D887480032CC7C /* THLapack.c */; };
+		D571F22618D887480032CC7C /* THStorage.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20018D887480032CC7C /* THStorage.c */; };
+		D571F22718D887480032CC7C /* THStorageCopy.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20218D887480032CC7C /* THStorageCopy.c */; };
+		D571F22818D887480032CC7C /* THTensor.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20418D887480032CC7C /* THTensor.c */; };
+		D571F22918D887480032CC7C /* THTensorConv.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20618D887480032CC7C /* THTensorConv.c */; };
+		D571F22A18D887480032CC7C /* THTensorCopy.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20818D887480032CC7C /* THTensorCopy.c */; };
+		D571F22B18D887480032CC7C /* THTensorLapack.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20A18D887480032CC7C /* THTensorLapack.c */; };
+		D571F22C18D887480032CC7C /* THTensorMath.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20C18D887480032CC7C /* THTensorMath.c */; };
+		D571F22D18D887480032CC7C /* THTensorRandom.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F20E18D887480032CC7C /* THTensorRandom.c */; };
+		D571F22E18D887480032CC7C /* THVector.c in Sources */ = {isa = PBXBuildFile; fileRef = D571F21018D887480032CC7C /* THVector.c */; };
+		D571F22F18D88A860032CC7C /* Torch.m in Sources */ = {isa = PBXBuildFile; fileRef = D56AECF91816B43E00C0A585 /* Torch.m */; };
+		D571F23018D88AA20032CC7C /* Torch.h in Sources */ = {isa = PBXBuildFile; fileRef = D56AECFA1816B43E00C0A585 /* Torch.h */; };
+		D571F25A18D89F430032CC7C /* DBTileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D571F25918D89F430032CC7C /* DBTileButton.m */; };
+		D57F38F817A2987600BFD86C /* EEToolbarCenterButtonOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D57F38ED17A2987600BFD86C /* EEToolbarCenterButtonOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D57F390317A29BC500BFD86C /* UIToolbar+EEToolbarCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D57F390217A29BB300BFD86C /* UIToolbar+EEToolbarCenterButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D59F5B87179FF0C100F2E05D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F5B86179FF0C100F2E05D /* MobileCoreServices.framework */; };
+		D5C9864418D9BCC9002ACE4F /* 4-dark-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863418D9BCC9002ACE4F /* 4-dark-background.jpg */; };
+		D5C9864518D9BCC9002ACE4F /* 4-dark-background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863518D9BCC9002ACE4F /* 4-dark-background@2x.jpg */; };
+		D5C9864618D9BCC9002ACE4F /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863618D9BCC9002ACE4F /* blackButton.png */; };
+		D5C9864718D9BCC9002ACE4F /* blackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863718D9BCC9002ACE4F /* blackButton@2x.png */; };
+		D5C9864818D9BCC9002ACE4F /* blackButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863818D9BCC9002ACE4F /* blackButtonHighlight.png */; };
+		D5C9864918D9BCC9002ACE4F /* blackButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863918D9BCC9002ACE4F /* blackButtonHighlight@2x.png */; };
+		D5C9864A18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863A18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed.png */; };
+		D5C9864B18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863B18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed@2x.png */; };
+		D5C9864C18D9BCC9002ACE4F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863C18D9BCC9002ACE4F /* Default.png */; };
+		D5C9864E18D9BCC9002ACE4F /* draw-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863E18D9BCC9002ACE4F /* draw-arrow.png */; };
+		D5C9864F18D9BCC9002ACE4F /* draw-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9863F18D9BCC9002ACE4F /* draw-arrow@2x.png */; };
+		D5C9865018D9BCC9002ACE4F /* icon-flash.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9864018D9BCC9002ACE4F /* icon-flash.png */; };
+		D5C9865118D9BCC9002ACE4F /* icon-flash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9864118D9BCC9002ACE4F /* icon-flash@2x.png */; };
+		D5C9865218D9BCC9002ACE4F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9864218D9BCC9002ACE4F /* Icon.png */; };
+		D5C9865318D9BCC9002ACE4F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9864318D9BCC9002ACE4F /* Icon@2x.png */; };
+		D5C9865518D9BD5D002ACE4F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C9865418D9BD5D002ACE4F /* Default@2x.png */; };
+		D5C9865818D9BE50002ACE4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C9865718D9BE50002ACE4F /* Images.xcassets */; };
+		D5F8618417902B5C0024F10D /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617817902B5C0024F10D /* cover.jpg */; };
+		D5F8618517902B5C0024F10D /* custom3_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617917902B5C0024F10D /* custom3_1.png */; };
+		D5F8618617902B5C0024F10D /* custom5_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617A17902B5C0024F10D /* custom5_1.png */; };
+		D5F8618717902B5C0024F10D /* custom8_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617B17902B5C0024F10D /* custom8_1.png */; };
+		D5F8618817902B5C0024F10D /* custom8_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617C17902B5C0024F10D /* custom8_2.png */; };
+		D5F8618917902B5C0024F10D /* mnist.neuralnetwork in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617D17902B5C0024F10D /* mnist.neuralnetwork */; };
+		D5F8618A17902B5C0024F10D /* mnist_ascii.neuralnetwork in Resources */ = {isa = PBXBuildFile; fileRef = D5F8617E17902B5C0024F10D /* mnist_ascii.neuralnetwork */; };
+		D5F8618C17902B5C0024F10D /* test4.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8618017902B5C0024F10D /* test4.png */; };
+		D5F8618D17902B5C0024F10D /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8618117902B5C0024F10D /* test5.png */; };
+		D5F8618E17902B5C0024F10D /* test7.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F8618217902B5C0024F10D /* test7.png */; };
+		D5F8618F17902B5C0024F10D /* xor.neuralnetwork in Resources */ = {isa = PBXBuildFile; fileRef = D5F8618317902B5C0024F10D /* xor.neuralnetwork */; };
+		D5F861911790405E0024F10D /* res in Resources */ = {isa = PBXBuildFile; fileRef = D5F861901790405E0024F10D /* res */; };
+		D5FB2B281790051800D129F8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B221790051800D129F8 /* Accelerate.framework */; };
+		D5FB2B291790051900D129F8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B231790051800D129F8 /* AssetsLibrary.framework */; };
+		D5FB2B2A1790051900D129F8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B241790051800D129F8 /* AVFoundation.framework */; };
+		D5FB2B2B1790051900D129F8 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B251790051800D129F8 /* CoreImage.framework */; };
+		D5FB2B2C1790051900D129F8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B261790051800D129F8 /* CoreMedia.framework */; };
+		D5FB2B2D1790051900D129F8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B271790051800D129F8 /* CoreVideo.framework */; };
+		D5FB2B2F1790052000D129F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB2B2E1790052000D129F8 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D52868CC18D98E0C00C20A78 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		D53BCAB5178C2BDE00DF6373 /* Recognzr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recognzr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53BCAB8178C2BDE00DF6373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D53BCABA178C2BDE00DF6373 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D53BCABC178C2BDE00DF6373 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D53BCAC0178C2BDE00DF6373 /* Recognzr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Recognzr-Info.plist"; sourceTree = "<group>"; };
+		D53BCAC2178C2BDE00DF6373 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D53BCAC4178C2BDE00DF6373 /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = main.m; sourceTree = "<group>"; };
+		D53BCAC6178C2BDE00DF6373 /* Recognzr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recognzr-Prefix.pch"; sourceTree = "<group>"; };
+		D55BB7E21816B994006B6624 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D56689A41816BAC000034273 /* xor.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = xor.lua; path = DemoApp/xor.lua; sourceTree = SOURCE_ROOT; };
+		D56689A51816BAC000034273 /* main.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.lua; path = DemoApp/main.lua; sourceTree = SOURCE_ROOT; };
+		D56689A61816BAC000034273 /* digits.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = digits.lua; path = DemoApp/digits.lua; sourceTree = SOURCE_ROOT; };
+		D56689AB1816BC0400034273 /* GLESImageView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLESImageView.mm; sourceTree = "<group>"; };
+		D56689AC1816BC0400034273 /* GLESImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESImageView.h; sourceTree = "<group>"; };
+		D56689AE1816BC1500034273 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D56AECEB1816B43E00C0A585 /* DrawViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = DrawViewController.m; sourceTree = "<group>"; };
+		D56AECEC1816B43E00C0A585 /* ImageProcessor.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ImageProcessor.mm; sourceTree = "<group>"; };
+		D56AECED1816B43E00C0A585 /* ImageProcessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ImageProcessor.h; sourceTree = "<group>"; };
+		D56AECEE1816B43E00C0A585 /* CameraViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraViewController.mm; sourceTree = "<group>"; };
+		D56AECEF1816B43E00C0A585 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		D56AECF01816B43E00C0A585 /* LineDrawingView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LineDrawingView.m; sourceTree = "<group>"; };
+		D56AECF11816B43E00C0A585 /* LineDrawingView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LineDrawingView.h; sourceTree = "<group>"; };
+		D56AECF31816B43E00C0A585 /* DrawViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = DrawViewController.h; sourceTree = "<group>"; };
+		D56AECF41816B43E00C0A585 /* CameraViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = CameraViewController.h; sourceTree = "<group>"; };
+		D56AECF91816B43E00C0A585 /* Torch.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Torch.m; sourceTree = "<group>"; };
+		D56AECFA1816B43E00C0A585 /* Torch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Torch.h; sourceTree = "<group>"; };
+		D56AECFB1816B43E00C0A585 /* InfoViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = InfoViewController.m; sourceTree = "<group>"; };
+		D56AECFD1816B43E00C0A585 /* ViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ViewController.m; sourceTree = "<group>"; };
+		D56AECFE1816B43E00C0A585 /* ViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ViewController.h; sourceTree = "<group>"; };
+		D56AED001816B43E00C0A585 /* InfoViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = InfoViewController.h; sourceTree = "<group>"; };
+		D56AED011816B43E00C0A585 /* StartupViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = StartupViewController.h; sourceTree = "<group>"; };
+		D56AED041816B43E00C0A585 /* AppVars.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AppVars.h; sourceTree = "<group>"; };
+		D56AED061816B43E00C0A585 /* AppVars.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AppVars.m; sourceTree = "<group>"; };
+		D56AED071816B43E00C0A585 /* AppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AppDelegate.h; sourceTree = "<group>"; };
+		D56AED081816B43E00C0A585 /* StartupViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = StartupViewController.m; sourceTree = "<group>"; };
+		D571F0C618D87EBE0032CC7C /* AttributionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributionsViewController.h; sourceTree = "<group>"; };
+		D571F0C718D87EBE0032CC7C /* AttributionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributionsViewController.m; sourceTree = "<group>"; };
+		D571F0C918D87F2E0032CC7C /* Attributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Attributions.txt; path = DemoApp/Attributions.txt; sourceTree = SOURCE_ROOT; };
+		D571F0CB18D886430032CC7C /* framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = framework; sourceTree = "<group>"; };
+		D571F0D018D886520032CC7C /* libgraphcuts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgraphcuts.a; sourceTree = "<group>"; };
+		D571F0D118D886520032CC7C /* libimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libimage.a; sourceTree = "<group>"; };
+		D571F0D218D886520032CC7C /* libimgraph.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libimgraph.a; sourceTree = "<group>"; };
+		D571F0D318D886520032CC7C /* libluaT.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluaT.a; sourceTree = "<group>"; };
+		D571F0D418D886520032CC7C /* libnn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnn.a; sourceTree = "<group>"; };
+		D571F0D518D886520032CC7C /* libnnx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnnx.a; sourceTree = "<group>"; };
+		D571F0D618D886520032CC7C /* libpink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpink.a; sourceTree = "<group>"; };
+		D571F0D718D886520032CC7C /* libTH.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTH.a; sourceTree = "<group>"; };
+		D571F0D818D886520032CC7C /* libtorch-lua-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libtorch-lua-static.a"; sourceTree = "<group>"; };
+		D571F0D918D886520032CC7C /* libtorch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtorch.a; sourceTree = "<group>"; };
+		D571F0DC18D886520032CC7C /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		D571F0DD18D886520032CC7C /* inline.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inline.lua; sourceTree = "<group>"; };
+		D571F0DE18D886520032CC7C /* search.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = search.lua; sourceTree = "<group>"; };
+		D571F0E018D886520032CC7C /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		D571F0E218D886520032CC7C /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		D571F0E418D886520032CC7C /* Abs.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Abs.lua; sourceTree = "<group>"; };
+		D571F0E518D886520032CC7C /* AbsCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AbsCriterion.lua; sourceTree = "<group>"; };
+		D571F0E618D886520032CC7C /* Add.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Add.lua; sourceTree = "<group>"; };
+		D571F0E718D886520032CC7C /* CAddTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CAddTable.lua; sourceTree = "<group>"; };
+		D571F0E818D886520032CC7C /* CDivTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDivTable.lua; sourceTree = "<group>"; };
+		D571F0E918D886520032CC7C /* ClassNLLCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ClassNLLCriterion.lua; sourceTree = "<group>"; };
+		D571F0EA18D886520032CC7C /* CMul.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMul.lua; sourceTree = "<group>"; };
+		D571F0EB18D886520032CC7C /* CMulTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMulTable.lua; sourceTree = "<group>"; };
+		D571F0EC18D886520032CC7C /* Concat.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Concat.lua; sourceTree = "<group>"; };
+		D571F0ED18D886520032CC7C /* ConcatTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConcatTable.lua; sourceTree = "<group>"; };
+		D571F0EE18D886520032CC7C /* Copy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Copy.lua; sourceTree = "<group>"; };
+		D571F0EF18D886520032CC7C /* CosineDistance.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CosineDistance.lua; sourceTree = "<group>"; };
+		D571F0F018D886520032CC7C /* CosineEmbeddingCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CosineEmbeddingCriterion.lua; sourceTree = "<group>"; };
+		D571F0F118D886520032CC7C /* Criterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Criterion.lua; sourceTree = "<group>"; };
+		D571F0F218D886520032CC7C /* CriterionTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CriterionTable.lua; sourceTree = "<group>"; };
+		D571F0F318D886520032CC7C /* CSubTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CSubTable.lua; sourceTree = "<group>"; };
+		D571F0F418D886520032CC7C /* DistKLDivCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DistKLDivCriterion.lua; sourceTree = "<group>"; };
+		D571F0F518D886520032CC7C /* DotProduct.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DotProduct.lua; sourceTree = "<group>"; };
+		D571F0F618D886520032CC7C /* Euclidean.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Euclidean.lua; sourceTree = "<group>"; };
+		D571F0F718D886520032CC7C /* Exp.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Exp.lua; sourceTree = "<group>"; };
+		D571F0F818D886520032CC7C /* HardShrink.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HardShrink.lua; sourceTree = "<group>"; };
+		D571F0F918D886520032CC7C /* HardTanh.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HardTanh.lua; sourceTree = "<group>"; };
+		D571F0FA18D886520032CC7C /* hessian.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hessian.lua; sourceTree = "<group>"; };
+		D571F0FB18D886520032CC7C /* HingeEmbeddingCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HingeEmbeddingCriterion.lua; sourceTree = "<group>"; };
+		D571F0FC18D886520032CC7C /* Identity.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Identity.lua; sourceTree = "<group>"; };
+		D571F0FD18D886520032CC7C /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		D571F0FE18D886520032CC7C /* Jacobian.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jacobian.lua; sourceTree = "<group>"; };
+		D571F0FF18D886520032CC7C /* JoinTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JoinTable.lua; sourceTree = "<group>"; };
+		D571F10018D886520032CC7C /* L1Cost.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = L1Cost.lua; sourceTree = "<group>"; };
+		D571F10118D886520032CC7C /* L1HingeEmbeddingCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = L1HingeEmbeddingCriterion.lua; sourceTree = "<group>"; };
+		D571F10218D886520032CC7C /* Linear.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Linear.lua; sourceTree = "<group>"; };
+		D571F10318D886520032CC7C /* Log.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Log.lua; sourceTree = "<group>"; };
+		D571F10418D886520032CC7C /* LogSigmoid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LogSigmoid.lua; sourceTree = "<group>"; };
+		D571F10518D886520032CC7C /* LogSoftMax.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LogSoftMax.lua; sourceTree = "<group>"; };
+		D571F10618D886520032CC7C /* LookupTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LookupTable.lua; sourceTree = "<group>"; };
+		D571F10718D886520032CC7C /* MarginCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MarginCriterion.lua; sourceTree = "<group>"; };
+		D571F10818D886520032CC7C /* MarginRankingCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MarginRankingCriterion.lua; sourceTree = "<group>"; };
+		D571F10918D886520032CC7C /* Max.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Max.lua; sourceTree = "<group>"; };
+		D571F10A18D886520032CC7C /* Mean.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mean.lua; sourceTree = "<group>"; };
+		D571F10B18D886520032CC7C /* Min.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Min.lua; sourceTree = "<group>"; };
+		D571F10C18D886520032CC7C /* Module.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Module.lua; sourceTree = "<group>"; };
+		D571F10D18D886520032CC7C /* MSECriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MSECriterion.lua; sourceTree = "<group>"; };
+		D571F10E18D886520032CC7C /* Mul.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mul.lua; sourceTree = "<group>"; };
+		D571F10F18D886520032CC7C /* MultiCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MultiCriterion.lua; sourceTree = "<group>"; };
+		D571F11018D886520032CC7C /* MultiLabelMarginCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MultiLabelMarginCriterion.lua; sourceTree = "<group>"; };
+		D571F11118D886520032CC7C /* MultiMarginCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MultiMarginCriterion.lua; sourceTree = "<group>"; };
+		D571F11218D886520032CC7C /* Narrow.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Narrow.lua; sourceTree = "<group>"; };
+		D571F11318D886520032CC7C /* PairwiseDistance.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PairwiseDistance.lua; sourceTree = "<group>"; };
+		D571F11418D886520032CC7C /* Parallel.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Parallel.lua; sourceTree = "<group>"; };
+		D571F11518D886520032CC7C /* ParallelTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParallelTable.lua; sourceTree = "<group>"; };
+		D571F11618D886520032CC7C /* Power.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Power.lua; sourceTree = "<group>"; };
+		D571F11718D886520032CC7C /* Replicate.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Replicate.lua; sourceTree = "<group>"; };
+		D571F11818D886520032CC7C /* Reshape.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Reshape.lua; sourceTree = "<group>"; };
+		D571F11918D886520032CC7C /* Select.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Select.lua; sourceTree = "<group>"; };
+		D571F11A18D886520032CC7C /* Sequential.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sequential.lua; sourceTree = "<group>"; };
+		D571F11B18D886520032CC7C /* Sigmoid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sigmoid.lua; sourceTree = "<group>"; };
+		D571F11C18D886520032CC7C /* SoftMax.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SoftMax.lua; sourceTree = "<group>"; };
+		D571F11D18D886520032CC7C /* SoftMin.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SoftMin.lua; sourceTree = "<group>"; };
+		D571F11E18D886520032CC7C /* SoftPlus.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SoftPlus.lua; sourceTree = "<group>"; };
+		D571F11F18D886520032CC7C /* SoftShrink.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SoftShrink.lua; sourceTree = "<group>"; };
+		D571F12018D886520032CC7C /* SoftSign.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SoftSign.lua; sourceTree = "<group>"; };
+		D571F12118D886520032CC7C /* SparseLinear.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SparseLinear.lua; sourceTree = "<group>"; };
+		D571F12218D886520032CC7C /* SpatialContrastiveNormalization.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialContrastiveNormalization.lua; sourceTree = "<group>"; };
+		D571F12318D886520032CC7C /* SpatialConvolution.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialConvolution.lua; sourceTree = "<group>"; };
+		D571F12418D886520032CC7C /* SpatialConvolutionMap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialConvolutionMap.lua; sourceTree = "<group>"; };
+		D571F12518D886520032CC7C /* SpatialConvolutionMM.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialConvolutionMM.lua; sourceTree = "<group>"; };
+		D571F12618D886520032CC7C /* SpatialDivisiveNormalization.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialDivisiveNormalization.lua; sourceTree = "<group>"; };
+		D571F12718D886520032CC7C /* SpatialFullConvolution.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialFullConvolution.lua; sourceTree = "<group>"; };
+		D571F12818D886520032CC7C /* SpatialFullConvolutionMap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialFullConvolutionMap.lua; sourceTree = "<group>"; };
+		D571F12918D886520032CC7C /* SpatialLPPooling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialLPPooling.lua; sourceTree = "<group>"; };
+		D571F12A18D886520032CC7C /* SpatialMaxPooling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialMaxPooling.lua; sourceTree = "<group>"; };
+		D571F12B18D886520032CC7C /* SpatialSubSampling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialSubSampling.lua; sourceTree = "<group>"; };
+		D571F12C18D886520032CC7C /* SpatialSubtractiveNormalization.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialSubtractiveNormalization.lua; sourceTree = "<group>"; };
+		D571F12D18D886520032CC7C /* SpatialZeroPadding.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialZeroPadding.lua; sourceTree = "<group>"; };
+		D571F12E18D886520032CC7C /* SplitTable.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SplitTable.lua; sourceTree = "<group>"; };
+		D571F12F18D886520032CC7C /* Sqrt.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sqrt.lua; sourceTree = "<group>"; };
+		D571F13018D886520032CC7C /* Square.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Square.lua; sourceTree = "<group>"; };
+		D571F13118D886520032CC7C /* StochasticGradient.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StochasticGradient.lua; sourceTree = "<group>"; };
+		D571F13218D886520032CC7C /* Sum.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sum.lua; sourceTree = "<group>"; };
+		D571F13318D886520032CC7C /* Tanh.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tanh.lua; sourceTree = "<group>"; };
+		D571F13418D886520032CC7C /* TanhShrink.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TanhShrink.lua; sourceTree = "<group>"; };
+		D571F13518D886520032CC7C /* TemporalConvolution.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemporalConvolution.lua; sourceTree = "<group>"; };
+		D571F13618D886520032CC7C /* TemporalMaxPooling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemporalMaxPooling.lua; sourceTree = "<group>"; };
+		D571F13718D886520032CC7C /* TemporalSubSampling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TemporalSubSampling.lua; sourceTree = "<group>"; };
+		D571F13818D886520032CC7C /* Threshold.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Threshold.lua; sourceTree = "<group>"; };
+		D571F13918D886520032CC7C /* VolumetricConvolution.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VolumetricConvolution.lua; sourceTree = "<group>"; };
+		D571F13A18D886520032CC7C /* WeightedEuclidean.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WeightedEuclidean.lua; sourceTree = "<group>"; };
+		D571F13B18D886520032CC7C /* WeightedMSECriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WeightedMSECriterion.lua; sourceTree = "<group>"; };
+		D571F13D18D886520032CC7C /* DataList.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataList.lua; sourceTree = "<group>"; };
+		D571F13E18D886520032CC7C /* DataSet.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSet.lua; sourceTree = "<group>"; };
+		D571F13F18D886520032CC7C /* DataSetLabelMe.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSetLabelMe.lua; sourceTree = "<group>"; };
+		D571F14018D886520032CC7C /* DataSetSamplingPascal.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSetSamplingPascal.lua; sourceTree = "<group>"; };
+		D571F14118D886520032CC7C /* DistMarginCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DistMarginCriterion.lua; sourceTree = "<group>"; };
+		D571F14218D886520032CC7C /* DistNLLCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DistNLLCriterion.lua; sourceTree = "<group>"; };
+		D571F14318D886520032CC7C /* FunctionWrapper.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FunctionWrapper.lua; sourceTree = "<group>"; };
+		D571F14418D886520032CC7C /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		D571F14518D886520032CC7C /* Probe.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Probe.lua; sourceTree = "<group>"; };
+		D571F14618D886520032CC7C /* SparseCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SparseCriterion.lua; sourceTree = "<group>"; };
+		D571F14718D886520032CC7C /* SpatialClassifier.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialClassifier.lua; sourceTree = "<group>"; };
+		D571F14818D886520032CC7C /* SpatialColorTransform.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialColorTransform.lua; sourceTree = "<group>"; };
+		D571F14918D886520032CC7C /* SpatialDownSampling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialDownSampling.lua; sourceTree = "<group>"; };
+		D571F14A18D886520032CC7C /* SpatialFovea.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialFovea.lua; sourceTree = "<group>"; };
+		D571F14B18D886520032CC7C /* SpatialGraph.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialGraph.lua; sourceTree = "<group>"; };
+		D571F14C18D886520032CC7C /* SpatialLinear.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialLinear.lua; sourceTree = "<group>"; };
+		D571F14D18D886520032CC7C /* SpatialMatching.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialMatching.lua; sourceTree = "<group>"; };
+		D571F14E18D886520032CC7C /* SpatialMaxSampling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialMaxSampling.lua; sourceTree = "<group>"; };
+		D571F14F18D886520032CC7C /* SpatialNormalization.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialNormalization.lua; sourceTree = "<group>"; };
+		D571F15018D886520032CC7C /* SpatialPadding.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialPadding.lua; sourceTree = "<group>"; };
+		D571F15118D886520032CC7C /* SpatialPyramid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialPyramid.lua; sourceTree = "<group>"; };
+		D571F15218D886520032CC7C /* SpatialRadialMatching.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialRadialMatching.lua; sourceTree = "<group>"; };
+		D571F15318D886520032CC7C /* SpatialRecursiveFovea.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialRecursiveFovea.lua; sourceTree = "<group>"; };
+		D571F15418D886520032CC7C /* SpatialReSampling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialReSampling.lua; sourceTree = "<group>"; };
+		D571F15518D886520032CC7C /* SpatialReSamplingEx.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialReSamplingEx.lua; sourceTree = "<group>"; };
+		D571F15618D886520032CC7C /* SpatialSparseCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialSparseCriterion.lua; sourceTree = "<group>"; };
+		D571F15718D886520032CC7C /* SpatialUpSampling.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpatialUpSampling.lua; sourceTree = "<group>"; };
+		D571F15818D886520032CC7C /* SuperCriterion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SuperCriterion.lua; sourceTree = "<group>"; };
+		D571F15918D886520032CC7C /* Tic.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tic.lua; sourceTree = "<group>"; };
+		D571F15A18D886520032CC7C /* Toc.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Toc.lua; sourceTree = "<group>"; };
+		D571F15C18D886520032CC7C /* CmdLine.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CmdLine.lua; sourceTree = "<group>"; };
+		D571F15D18D886520032CC7C /* File.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File.lua; sourceTree = "<group>"; };
+		D571F15E18D886520032CC7C /* hist.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hist.lua; sourceTree = "<group>"; };
+		D571F15F18D886520032CC7C /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		D571F16018D886520032CC7C /* random.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = random.lua; sourceTree = "<group>"; };
+		D571F16118D886520032CC7C /* Tensor.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tensor.lua; sourceTree = "<group>"; };
+		D571F16218D886520032CC7C /* TensorMath.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TensorMath.lua; sourceTree = "<group>"; };
+		D571F16318D886520032CC7C /* Tester.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tester.lua; sourceTree = "<group>"; };
+		D571F1F118D887480032CC7C /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		D571F1F218D887480032CC7C /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		D571F1F318D887480032CC7C /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		D571F1F418D887480032CC7C /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		D571F1F518D887480032CC7C /* luaT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaT.h; sourceTree = "<group>"; };
+		D571F1F718D887480032CC7C /* qtluaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qtluaconf.h; sourceTree = "<group>"; };
+		D571F1F818D887480032CC7C /* qtluaengine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qtluaengine.h; sourceTree = "<group>"; };
+		D571F1F918D887480032CC7C /* qtluautils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qtluautils.h; sourceTree = "<group>"; };
+		D571F1FC18D887480032CC7C /* THBlas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THBlas.c; sourceTree = "<group>"; };
+		D571F1FD18D887480032CC7C /* THBlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBlas.h; sourceTree = "<group>"; };
+		D571F1FE18D887480032CC7C /* THLapack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THLapack.c; sourceTree = "<group>"; };
+		D571F1FF18D887480032CC7C /* THLapack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLapack.h; sourceTree = "<group>"; };
+		D571F20018D887480032CC7C /* THStorage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THStorage.c; sourceTree = "<group>"; };
+		D571F20118D887480032CC7C /* THStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THStorage.h; sourceTree = "<group>"; };
+		D571F20218D887480032CC7C /* THStorageCopy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THStorageCopy.c; sourceTree = "<group>"; };
+		D571F20318D887480032CC7C /* THStorageCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THStorageCopy.h; sourceTree = "<group>"; };
+		D571F20418D887480032CC7C /* THTensor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THTensor.c; sourceTree = "<group>"; };
+		D571F20518D887480032CC7C /* THTensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensor.h; sourceTree = "<group>"; };
+		D571F20618D887480032CC7C /* THTensorConv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THTensorConv.c; sourceTree = "<group>"; };
+		D571F20718D887480032CC7C /* THTensorConv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorConv.h; sourceTree = "<group>"; };
+		D571F20818D887480032CC7C /* THTensorCopy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THTensorCopy.c; sourceTree = "<group>"; };
+		D571F20918D887480032CC7C /* THTensorCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorCopy.h; sourceTree = "<group>"; };
+		D571F20A18D887480032CC7C /* THTensorLapack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THTensorLapack.c; sourceTree = "<group>"; };
+		D571F20B18D887480032CC7C /* THTensorLapack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorLapack.h; sourceTree = "<group>"; };
+		D571F20C18D887480032CC7C /* THTensorMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THTensorMath.c; sourceTree = "<group>"; };
+		D571F20D18D887480032CC7C /* THTensorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorMath.h; sourceTree = "<group>"; };
+		D571F20E18D887480032CC7C /* THTensorRandom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THTensorRandom.c; sourceTree = "<group>"; };
+		D571F20F18D887480032CC7C /* THTensorRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorRandom.h; sourceTree = "<group>"; };
+		D571F21018D887480032CC7C /* THVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = THVector.c; sourceTree = "<group>"; };
+		D571F21118D887480032CC7C /* TH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TH.h; sourceTree = "<group>"; };
+		D571F21218D887480032CC7C /* THBlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBlas.h; sourceTree = "<group>"; };
+		D571F21318D887480032CC7C /* THDiskFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDiskFile.h; sourceTree = "<group>"; };
+		D571F21418D887480032CC7C /* THFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THFile.h; sourceTree = "<group>"; };
+		D571F21518D887480032CC7C /* THFilePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THFilePrivate.h; sourceTree = "<group>"; };
+		D571F21618D887480032CC7C /* THGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THGeneral.h; sourceTree = "<group>"; };
+		D571F21718D887480032CC7C /* THGenerateAllTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THGenerateAllTypes.h; sourceTree = "<group>"; };
+		D571F21818D887480032CC7C /* THGenerateFloatTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THGenerateFloatTypes.h; sourceTree = "<group>"; };
+		D571F21918D887480032CC7C /* THGenerateIntTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THGenerateIntTypes.h; sourceTree = "<group>"; };
+		D571F21A18D887480032CC7C /* THLapack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLapack.h; sourceTree = "<group>"; };
+		D571F21B18D887480032CC7C /* THLogAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLogAdd.h; sourceTree = "<group>"; };
+		D571F21C18D887480032CC7C /* THMemoryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMemoryFile.h; sourceTree = "<group>"; };
+		D571F21D18D887480032CC7C /* THRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THRandom.h; sourceTree = "<group>"; };
+		D571F21E18D887480032CC7C /* THStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THStorage.h; sourceTree = "<group>"; };
+		D571F21F18D887480032CC7C /* THTensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensor.h; sourceTree = "<group>"; };
+		D571F22018D887480032CC7C /* THTensorApply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorApply.h; sourceTree = "<group>"; };
+		D571F22118D887480032CC7C /* THTensorDimApply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorDimApply.h; sourceTree = "<group>"; };
+		D571F22218D887480032CC7C /* THTensorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTensorMacros.h; sourceTree = "<group>"; };
+		D571F22318D887480032CC7C /* THVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THVector.h; sourceTree = "<group>"; };
+		D571F25818D89F430032CC7C /* DBTileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTileButton.h; sourceTree = "<group>"; };
+		D571F25918D89F430032CC7C /* DBTileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTileButton.m; sourceTree = "<group>"; };
+		D57F38EC17A2987600BFD86C /* EEToolbarCenterButtonOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEToolbarCenterButtonOverlay.h; sourceTree = "<group>"; };
+		D57F38ED17A2987600BFD86C /* EEToolbarCenterButtonOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEToolbarCenterButtonOverlay.m; sourceTree = "<group>"; };
+		D57F390117A29BB300BFD86C /* UIToolbar+EEToolbarCenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+EEToolbarCenterButton.h"; sourceTree = "<group>"; };
+		D57F390217A29BB300BFD86C /* UIToolbar+EEToolbarCenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+EEToolbarCenterButton.m"; sourceTree = "<group>"; };
+		D59F5B86179FF0C100F2E05D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D5C9863418D9BCC9002ACE4F /* 4-dark-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-dark-background.jpg"; sourceTree = "<group>"; };
+		D5C9863518D9BCC9002ACE4F /* 4-dark-background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4-dark-background@2x.jpg"; sourceTree = "<group>"; };
+		D5C9863618D9BCC9002ACE4F /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
+		D5C9863718D9BCC9002ACE4F /* blackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButton@2x.png"; sourceTree = "<group>"; };
+		D5C9863818D9BCC9002ACE4F /* blackButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButtonHighlight.png; sourceTree = "<group>"; };
+		D5C9863918D9BCC9002ACE4F /* blackButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		D5C9863A18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-ui-camera-button-dimmed.png"; sourceTree = "<group>"; };
+		D5C9863B18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-ui-camera-button-dimmed@2x.png"; sourceTree = "<group>"; };
+		D5C9863C18D9BCC9002ACE4F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D5C9863E18D9BCC9002ACE4F /* draw-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "draw-arrow.png"; sourceTree = "<group>"; };
+		D5C9863F18D9BCC9002ACE4F /* draw-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "draw-arrow@2x.png"; sourceTree = "<group>"; };
+		D5C9864018D9BCC9002ACE4F /* icon-flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-flash.png"; sourceTree = "<group>"; };
+		D5C9864118D9BCC9002ACE4F /* icon-flash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-flash@2x.png"; sourceTree = "<group>"; };
+		D5C9864218D9BCC9002ACE4F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D5C9864318D9BCC9002ACE4F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D5C9865418D9BD5D002ACE4F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D5C9865718D9BE50002ACE4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "symbol-recognizer/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		D5F8617817902B5C0024F10D /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover.jpg; sourceTree = "<group>"; };
+		D5F8617917902B5C0024F10D /* custom3_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom3_1.png; sourceTree = "<group>"; };
+		D5F8617A17902B5C0024F10D /* custom5_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom5_1.png; sourceTree = "<group>"; };
+		D5F8617B17902B5C0024F10D /* custom8_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom8_1.png; sourceTree = "<group>"; };
+		D5F8617C17902B5C0024F10D /* custom8_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom8_2.png; sourceTree = "<group>"; };
+		D5F8617D17902B5C0024F10D /* mnist.neuralnetwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = mnist.neuralnetwork; sourceTree = "<group>"; };
+		D5F8617E17902B5C0024F10D /* mnist_ascii.neuralnetwork */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mnist_ascii.neuralnetwork; sourceTree = "<group>"; };
+		D5F8618017902B5C0024F10D /* test4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test4.png; sourceTree = "<group>"; };
+		D5F8618117902B5C0024F10D /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test5.png; sourceTree = "<group>"; };
+		D5F8618217902B5C0024F10D /* test7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test7.png; sourceTree = "<group>"; };
+		D5F8618317902B5C0024F10D /* xor.neuralnetwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = xor.neuralnetwork; sourceTree = "<group>"; };
+		D5F861901790405E0024F10D /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = DemoApp/res; sourceTree = "<group>"; };
+		D5FB2B221790051800D129F8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D5FB2B231790051800D129F8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D5FB2B241790051800D129F8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D5FB2B251790051800D129F8 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D5FB2B261790051800D129F8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D5FB2B271790051800D129F8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D5FB2B2E1790052000D129F8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D53BCAB2178C2BDE00DF6373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D571F16D18D886520032CC7C /* libtorch.a in Frameworks */,
+				D56689AF1816BC1500034273 /* OpenGLES.framework in Frameworks */,
+				D571F16A18D886520032CC7C /* libpink.a in Frameworks */,
+				D59F5B87179FF0C100F2E05D /* MobileCoreServices.framework in Frameworks */,
+				D571F16418D886520032CC7C /* libgraphcuts.a in Frameworks */,
+				D5FB2B2F1790052000D129F8 /* QuartzCore.framework in Frameworks */,
+				D571F16B18D886520032CC7C /* libTH.a in Frameworks */,
+				D571F16718D886520032CC7C /* libluaT.a in Frameworks */,
+				D5FB2B281790051800D129F8 /* Accelerate.framework in Frameworks */,
+				D5FB2B291790051900D129F8 /* AssetsLibrary.framework in Frameworks */,
+				D5FB2B2A1790051900D129F8 /* AVFoundation.framework in Frameworks */,
+				D5FB2B2B1790051900D129F8 /* CoreImage.framework in Frameworks */,
+				D5FB2B2C1790051900D129F8 /* CoreMedia.framework in Frameworks */,
+				D571F16618D886520032CC7C /* libimgraph.a in Frameworks */,
+				D5FB2B2D1790051900D129F8 /* CoreVideo.framework in Frameworks */,
+				D571F16518D886520032CC7C /* libimage.a in Frameworks */,
+				D53BCAB9178C2BDE00DF6373 /* UIKit.framework in Frameworks */,
+				D571F16818D886520032CC7C /* libnn.a in Frameworks */,
+				D53BCABB178C2BDE00DF6373 /* Foundation.framework in Frameworks */,
+				D52868CD18D98E0C00C20A78 /* opencv2.framework in Frameworks */,
+				D571F16918D886520032CC7C /* libnnx.a in Frameworks */,
+				D53BCABD178C2BDE00DF6373 /* CoreGraphics.framework in Frameworks */,
+				D571F16C18D886520032CC7C /* libtorch-lua-static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D53BCAAC178C2BDE00DF6373 = {
+			isa = PBXGroup;
+			children = (
+				D5C9863318D9BCC9002ACE4F /* Resources */,
+				D571F0CD18D886520032CC7C /* framework */,
+				D571F0CB18D886430032CC7C /* framework */,
+				D57F38EB17A2987600BFD86C /* Classes */,
+				D5F861901790405E0024F10D /* res */,
+				D5F8617717902B5C0024F10D /* res */,
+				D53BCABE178C2BDE00DF6373 /* DemoApp */,
+				D53BCAB7178C2BDE00DF6373 /* Frameworks */,
+				D53BCAB6178C2BDE00DF6373 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D53BCAB6178C2BDE00DF6373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D53BCAB5178C2BDE00DF6373 /* Recognzr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D53BCAB7178C2BDE00DF6373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D52868CC18D98E0C00C20A78 /* opencv2.framework */,
+				D56689AE1816BC1500034273 /* OpenGLES.framework */,
+				D59F5B86179FF0C100F2E05D /* MobileCoreServices.framework */,
+				D5FB2B2E1790052000D129F8 /* QuartzCore.framework */,
+				D5FB2B221790051800D129F8 /* Accelerate.framework */,
+				D5FB2B231790051800D129F8 /* AssetsLibrary.framework */,
+				D5FB2B241790051800D129F8 /* AVFoundation.framework */,
+				D5FB2B251790051800D129F8 /* CoreImage.framework */,
+				D5FB2B261790051800D129F8 /* CoreMedia.framework */,
+				D5FB2B271790051800D129F8 /* CoreVideo.framework */,
+				D53BCAB8178C2BDE00DF6373 /* UIKit.framework */,
+				D53BCABA178C2BDE00DF6373 /* Foundation.framework */,
+				D53BCABC178C2BDE00DF6373 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D53BCABE178C2BDE00DF6373 /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0C618D87EBE0032CC7C /* AttributionsViewController.h */,
+				D571F0C718D87EBE0032CC7C /* AttributionsViewController.m */,
+				D56689AB1816BC0400034273 /* GLESImageView.mm */,
+				D56689AC1816BC0400034273 /* GLESImageView.h */,
+				D56AECF41816B43E00C0A585 /* CameraViewController.h */,
+				D56AECEE1816B43E00C0A585 /* CameraViewController.mm */,
+				D56AECF31816B43E00C0A585 /* DrawViewController.h */,
+				D56AECEB1816B43E00C0A585 /* DrawViewController.m */,
+				D56AECED1816B43E00C0A585 /* ImageProcessor.h */,
+				D56AECEC1816B43E00C0A585 /* ImageProcessor.mm */,
+				D56AED001816B43E00C0A585 /* InfoViewController.h */,
+				D56AECFB1816B43E00C0A585 /* InfoViewController.m */,
+				D56AECF11816B43E00C0A585 /* LineDrawingView.h */,
+				D56AECF01816B43E00C0A585 /* LineDrawingView.m */,
+				D56AED011816B43E00C0A585 /* StartupViewController.h */,
+				D56AED081816B43E00C0A585 /* StartupViewController.m */,
+				D56AECFA1816B43E00C0A585 /* Torch.h */,
+				D56AECF91816B43E00C0A585 /* Torch.m */,
+				D56AECFE1816B43E00C0A585 /* ViewController.h */,
+				D56AECFD1816B43E00C0A585 /* ViewController.m */,
+				D571F25818D89F430032CC7C /* DBTileButton.h */,
+				D571F25918D89F430032CC7C /* DBTileButton.m */,
+				D53BCABF178C2BDE00DF6373 /* Supporting Files */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		D53BCABF178C2BDE00DF6373 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D56AED041816B43E00C0A585 /* AppVars.h */,
+				D56AED061816B43E00C0A585 /* AppVars.m */,
+				D56AED071816B43E00C0A585 /* AppDelegate.h */,
+				D56AECEF1816B43E00C0A585 /* AppDelegate.mm */,
+				D55BB7E11816B994006B6624 /* MainStoryboard.storyboard */,
+				D53BCAC0178C2BDE00DF6373 /* Recognzr-Info.plist */,
+				D53BCAC1178C2BDE00DF6373 /* InfoPlist.strings */,
+				D53BCAC4178C2BDE00DF6373 /* main.m */,
+				D53BCAC6178C2BDE00DF6373 /* Recognzr-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D571F0CD18D886520032CC7C /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0CE18D886520032CC7C /* include */,
+				D571F0CF18D886520032CC7C /* lib */,
+				D571F0DA18D886520032CC7C /* lua */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		D571F0CE18D886520032CC7C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D571F1F118D887480032CC7C /* lauxlib.h */,
+				D571F1F218D887480032CC7C /* lua.h */,
+				D571F1F318D887480032CC7C /* luaconf.h */,
+				D571F1F418D887480032CC7C /* lualib.h */,
+				D571F1F518D887480032CC7C /* luaT.h */,
+				D571F1F618D887480032CC7C /* qtlua */,
+				D571F1FA18D887480032CC7C /* TH */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D571F0CF18D886520032CC7C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0D018D886520032CC7C /* libgraphcuts.a */,
+				D571F0D118D886520032CC7C /* libimage.a */,
+				D571F0D218D886520032CC7C /* libimgraph.a */,
+				D571F0D318D886520032CC7C /* libluaT.a */,
+				D571F0D418D886520032CC7C /* libnn.a */,
+				D571F0D518D886520032CC7C /* libnnx.a */,
+				D571F0D618D886520032CC7C /* libpink.a */,
+				D571F0D718D886520032CC7C /* libTH.a */,
+				D571F0D818D886520032CC7C /* libtorch-lua-static.a */,
+				D571F0D918D886520032CC7C /* libtorch.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		D571F0DA18D886520032CC7C /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0DB18D886520032CC7C /* dok */,
+				D571F0DF18D886520032CC7C /* image */,
+				D571F0E118D886520032CC7C /* imgraph */,
+				D571F0E318D886520032CC7C /* nn */,
+				D571F13C18D886520032CC7C /* nnx */,
+				D571F15B18D886520032CC7C /* torch */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		D571F0DB18D886520032CC7C /* dok */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0DC18D886520032CC7C /* init.lua */,
+				D571F0DD18D886520032CC7C /* inline.lua */,
+				D571F0DE18D886520032CC7C /* search.lua */,
+			);
+			path = dok;
+			sourceTree = "<group>";
+		};
+		D571F0DF18D886520032CC7C /* image */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0E018D886520032CC7C /* init.lua */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		D571F0E118D886520032CC7C /* imgraph */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0E218D886520032CC7C /* init.lua */,
+			);
+			path = imgraph;
+			sourceTree = "<group>";
+		};
+		D571F0E318D886520032CC7C /* nn */ = {
+			isa = PBXGroup;
+			children = (
+				D571F0E418D886520032CC7C /* Abs.lua */,
+				D571F0E518D886520032CC7C /* AbsCriterion.lua */,
+				D571F0E618D886520032CC7C /* Add.lua */,
+				D571F0E718D886520032CC7C /* CAddTable.lua */,
+				D571F0E818D886520032CC7C /* CDivTable.lua */,
+				D571F0E918D886520032CC7C /* ClassNLLCriterion.lua */,
+				D571F0EA18D886520032CC7C /* CMul.lua */,
+				D571F0EB18D886520032CC7C /* CMulTable.lua */,
+				D571F0EC18D886520032CC7C /* Concat.lua */,
+				D571F0ED18D886520032CC7C /* ConcatTable.lua */,
+				D571F0EE18D886520032CC7C /* Copy.lua */,
+				D571F0EF18D886520032CC7C /* CosineDistance.lua */,
+				D571F0F018D886520032CC7C /* CosineEmbeddingCriterion.lua */,
+				D571F0F118D886520032CC7C /* Criterion.lua */,
+				D571F0F218D886520032CC7C /* CriterionTable.lua */,
+				D571F0F318D886520032CC7C /* CSubTable.lua */,
+				D571F0F418D886520032CC7C /* DistKLDivCriterion.lua */,
+				D571F0F518D886520032CC7C /* DotProduct.lua */,
+				D571F0F618D886520032CC7C /* Euclidean.lua */,
+				D571F0F718D886520032CC7C /* Exp.lua */,
+				D571F0F818D886520032CC7C /* HardShrink.lua */,
+				D571F0F918D886520032CC7C /* HardTanh.lua */,
+				D571F0FA18D886520032CC7C /* hessian.lua */,
+				D571F0FB18D886520032CC7C /* HingeEmbeddingCriterion.lua */,
+				D571F0FC18D886520032CC7C /* Identity.lua */,
+				D571F0FD18D886520032CC7C /* init.lua */,
+				D571F0FE18D886520032CC7C /* Jacobian.lua */,
+				D571F0FF18D886520032CC7C /* JoinTable.lua */,
+				D571F10018D886520032CC7C /* L1Cost.lua */,
+				D571F10118D886520032CC7C /* L1HingeEmbeddingCriterion.lua */,
+				D571F10218D886520032CC7C /* Linear.lua */,
+				D571F10318D886520032CC7C /* Log.lua */,
+				D571F10418D886520032CC7C /* LogSigmoid.lua */,
+				D571F10518D886520032CC7C /* LogSoftMax.lua */,
+				D571F10618D886520032CC7C /* LookupTable.lua */,
+				D571F10718D886520032CC7C /* MarginCriterion.lua */,
+				D571F10818D886520032CC7C /* MarginRankingCriterion.lua */,
+				D571F10918D886520032CC7C /* Max.lua */,
+				D571F10A18D886520032CC7C /* Mean.lua */,
+				D571F10B18D886520032CC7C /* Min.lua */,
+				D571F10C18D886520032CC7C /* Module.lua */,
+				D571F10D18D886520032CC7C /* MSECriterion.lua */,
+				D571F10E18D886520032CC7C /* Mul.lua */,
+				D571F10F18D886520032CC7C /* MultiCriterion.lua */,
+				D571F11018D886520032CC7C /* MultiLabelMarginCriterion.lua */,
+				D571F11118D886520032CC7C /* MultiMarginCriterion.lua */,
+				D571F11218D886520032CC7C /* Narrow.lua */,
+				D571F11318D886520032CC7C /* PairwiseDistance.lua */,
+				D571F11418D886520032CC7C /* Parallel.lua */,
+				D571F11518D886520032CC7C /* ParallelTable.lua */,
+				D571F11618D886520032CC7C /* Power.lua */,
+				D571F11718D886520032CC7C /* Replicate.lua */,
+				D571F11818D886520032CC7C /* Reshape.lua */,
+				D571F11918D886520032CC7C /* Select.lua */,
+				D571F11A18D886520032CC7C /* Sequential.lua */,
+				D571F11B18D886520032CC7C /* Sigmoid.lua */,
+				D571F11C18D886520032CC7C /* SoftMax.lua */,
+				D571F11D18D886520032CC7C /* SoftMin.lua */,
+				D571F11E18D886520032CC7C /* SoftPlus.lua */,
+				D571F11F18D886520032CC7C /* SoftShrink.lua */,
+				D571F12018D886520032CC7C /* SoftSign.lua */,
+				D571F12118D886520032CC7C /* SparseLinear.lua */,
+				D571F12218D886520032CC7C /* SpatialContrastiveNormalization.lua */,
+				D571F12318D886520032CC7C /* SpatialConvolution.lua */,
+				D571F12418D886520032CC7C /* SpatialConvolutionMap.lua */,
+				D571F12518D886520032CC7C /* SpatialConvolutionMM.lua */,
+				D571F12618D886520032CC7C /* SpatialDivisiveNormalization.lua */,
+				D571F12718D886520032CC7C /* SpatialFullConvolution.lua */,
+				D571F12818D886520032CC7C /* SpatialFullConvolutionMap.lua */,
+				D571F12918D886520032CC7C /* SpatialLPPooling.lua */,
+				D571F12A18D886520032CC7C /* SpatialMaxPooling.lua */,
+				D571F12B18D886520032CC7C /* SpatialSubSampling.lua */,
+				D571F12C18D886520032CC7C /* SpatialSubtractiveNormalization.lua */,
+				D571F12D18D886520032CC7C /* SpatialZeroPadding.lua */,
+				D571F12E18D886520032CC7C /* SplitTable.lua */,
+				D571F12F18D886520032CC7C /* Sqrt.lua */,
+				D571F13018D886520032CC7C /* Square.lua */,
+				D571F13118D886520032CC7C /* StochasticGradient.lua */,
+				D571F13218D886520032CC7C /* Sum.lua */,
+				D571F13318D886520032CC7C /* Tanh.lua */,
+				D571F13418D886520032CC7C /* TanhShrink.lua */,
+				D571F13518D886520032CC7C /* TemporalConvolution.lua */,
+				D571F13618D886520032CC7C /* TemporalMaxPooling.lua */,
+				D571F13718D886520032CC7C /* TemporalSubSampling.lua */,
+				D571F13818D886520032CC7C /* Threshold.lua */,
+				D571F13918D886520032CC7C /* VolumetricConvolution.lua */,
+				D571F13A18D886520032CC7C /* WeightedEuclidean.lua */,
+				D571F13B18D886520032CC7C /* WeightedMSECriterion.lua */,
+			);
+			path = nn;
+			sourceTree = "<group>";
+		};
+		D571F13C18D886520032CC7C /* nnx */ = {
+			isa = PBXGroup;
+			children = (
+				D571F13D18D886520032CC7C /* DataList.lua */,
+				D571F13E18D886520032CC7C /* DataSet.lua */,
+				D571F13F18D886520032CC7C /* DataSetLabelMe.lua */,
+				D571F14018D886520032CC7C /* DataSetSamplingPascal.lua */,
+				D571F14118D886520032CC7C /* DistMarginCriterion.lua */,
+				D571F14218D886520032CC7C /* DistNLLCriterion.lua */,
+				D571F14318D886520032CC7C /* FunctionWrapper.lua */,
+				D571F14418D886520032CC7C /* init.lua */,
+				D571F14518D886520032CC7C /* Probe.lua */,
+				D571F14618D886520032CC7C /* SparseCriterion.lua */,
+				D571F14718D886520032CC7C /* SpatialClassifier.lua */,
+				D571F14818D886520032CC7C /* SpatialColorTransform.lua */,
+				D571F14918D886520032CC7C /* SpatialDownSampling.lua */,
+				D571F14A18D886520032CC7C /* SpatialFovea.lua */,
+				D571F14B18D886520032CC7C /* SpatialGraph.lua */,
+				D571F14C18D886520032CC7C /* SpatialLinear.lua */,
+				D571F14D18D886520032CC7C /* SpatialMatching.lua */,
+				D571F14E18D886520032CC7C /* SpatialMaxSampling.lua */,
+				D571F14F18D886520032CC7C /* SpatialNormalization.lua */,
+				D571F15018D886520032CC7C /* SpatialPadding.lua */,
+				D571F15118D886520032CC7C /* SpatialPyramid.lua */,
+				D571F15218D886520032CC7C /* SpatialRadialMatching.lua */,
+				D571F15318D886520032CC7C /* SpatialRecursiveFovea.lua */,
+				D571F15418D886520032CC7C /* SpatialReSampling.lua */,
+				D571F15518D886520032CC7C /* SpatialReSamplingEx.lua */,
+				D571F15618D886520032CC7C /* SpatialSparseCriterion.lua */,
+				D571F15718D886520032CC7C /* SpatialUpSampling.lua */,
+				D571F15818D886520032CC7C /* SuperCriterion.lua */,
+				D571F15918D886520032CC7C /* Tic.lua */,
+				D571F15A18D886520032CC7C /* Toc.lua */,
+			);
+			path = nnx;
+			sourceTree = "<group>";
+		};
+		D571F15B18D886520032CC7C /* torch */ = {
+			isa = PBXGroup;
+			children = (
+				D571F15C18D886520032CC7C /* CmdLine.lua */,
+				D571F15D18D886520032CC7C /* File.lua */,
+				D571F15E18D886520032CC7C /* hist.lua */,
+				D571F15F18D886520032CC7C /* init.lua */,
+				D571F16018D886520032CC7C /* random.lua */,
+				D571F16118D886520032CC7C /* Tensor.lua */,
+				D571F16218D886520032CC7C /* TensorMath.lua */,
+				D571F16318D886520032CC7C /* Tester.lua */,
+			);
+			path = torch;
+			sourceTree = "<group>";
+		};
+		D571F1F618D887480032CC7C /* qtlua */ = {
+			isa = PBXGroup;
+			children = (
+				D571F1F718D887480032CC7C /* qtluaconf.h */,
+				D571F1F818D887480032CC7C /* qtluaengine.h */,
+				D571F1F918D887480032CC7C /* qtluautils.h */,
+			);
+			path = qtlua;
+			sourceTree = "<group>";
+		};
+		D571F1FA18D887480032CC7C /* TH */ = {
+			isa = PBXGroup;
+			children = (
+				D571F1FB18D887480032CC7C /* generic */,
+				D571F21118D887480032CC7C /* TH.h */,
+				D571F21218D887480032CC7C /* THBlas.h */,
+				D571F21318D887480032CC7C /* THDiskFile.h */,
+				D571F21418D887480032CC7C /* THFile.h */,
+				D571F21518D887480032CC7C /* THFilePrivate.h */,
+				D571F21618D887480032CC7C /* THGeneral.h */,
+				D571F21718D887480032CC7C /* THGenerateAllTypes.h */,
+				D571F21818D887480032CC7C /* THGenerateFloatTypes.h */,
+				D571F21918D887480032CC7C /* THGenerateIntTypes.h */,
+				D571F21A18D887480032CC7C /* THLapack.h */,
+				D571F21B18D887480032CC7C /* THLogAdd.h */,
+				D571F21C18D887480032CC7C /* THMemoryFile.h */,
+				D571F21D18D887480032CC7C /* THRandom.h */,
+				D571F21E18D887480032CC7C /* THStorage.h */,
+				D571F21F18D887480032CC7C /* THTensor.h */,
+				D571F22018D887480032CC7C /* THTensorApply.h */,
+				D571F22118D887480032CC7C /* THTensorDimApply.h */,
+				D571F22218D887480032CC7C /* THTensorMacros.h */,
+				D571F22318D887480032CC7C /* THVector.h */,
+			);
+			path = TH;
+			sourceTree = "<group>";
+		};
+		D571F1FB18D887480032CC7C /* generic */ = {
+			isa = PBXGroup;
+			children = (
+				D571F1FC18D887480032CC7C /* THBlas.c */,
+				D571F1FD18D887480032CC7C /* THBlas.h */,
+				D571F1FE18D887480032CC7C /* THLapack.c */,
+				D571F1FF18D887480032CC7C /* THLapack.h */,
+				D571F20018D887480032CC7C /* THStorage.c */,
+				D571F20118D887480032CC7C /* THStorage.h */,
+				D571F20218D887480032CC7C /* THStorageCopy.c */,
+				D571F20318D887480032CC7C /* THStorageCopy.h */,
+				D571F20418D887480032CC7C /* THTensor.c */,
+				D571F20518D887480032CC7C /* THTensor.h */,
+				D571F20618D887480032CC7C /* THTensorConv.c */,
+				D571F20718D887480032CC7C /* THTensorConv.h */,
+				D571F20818D887480032CC7C /* THTensorCopy.c */,
+				D571F20918D887480032CC7C /* THTensorCopy.h */,
+				D571F20A18D887480032CC7C /* THTensorLapack.c */,
+				D571F20B18D887480032CC7C /* THTensorLapack.h */,
+				D571F20C18D887480032CC7C /* THTensorMath.c */,
+				D571F20D18D887480032CC7C /* THTensorMath.h */,
+				D571F20E18D887480032CC7C /* THTensorRandom.c */,
+				D571F20F18D887480032CC7C /* THTensorRandom.h */,
+				D571F21018D887480032CC7C /* THVector.c */,
+			);
+			path = generic;
+			sourceTree = "<group>";
+		};
+		D57F38EB17A2987600BFD86C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D57F390117A29BB300BFD86C /* UIToolbar+EEToolbarCenterButton.h */,
+				D57F390217A29BB300BFD86C /* UIToolbar+EEToolbarCenterButton.m */,
+				D57F38EC17A2987600BFD86C /* EEToolbarCenterButtonOverlay.h */,
+				D57F38ED17A2987600BFD86C /* EEToolbarCenterButtonOverlay.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D5C9863318D9BCC9002ACE4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5C9865718D9BE50002ACE4F /* Images.xcassets */,
+				D5C9863418D9BCC9002ACE4F /* 4-dark-background.jpg */,
+				D5C9863518D9BCC9002ACE4F /* 4-dark-background@2x.jpg */,
+				D5C9863618D9BCC9002ACE4F /* blackButton.png */,
+				D5C9863718D9BCC9002ACE4F /* blackButton@2x.png */,
+				D5C9863818D9BCC9002ACE4F /* blackButtonHighlight.png */,
+				D5C9863918D9BCC9002ACE4F /* blackButtonHighlight@2x.png */,
+				D5C9863A18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed.png */,
+				D5C9863B18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed@2x.png */,
+				D5C9863C18D9BCC9002ACE4F /* Default.png */,
+				D5C9863E18D9BCC9002ACE4F /* draw-arrow.png */,
+				D5C9863F18D9BCC9002ACE4F /* draw-arrow@2x.png */,
+				D5C9864018D9BCC9002ACE4F /* icon-flash.png */,
+				D5C9864118D9BCC9002ACE4F /* icon-flash@2x.png */,
+				D5C9865418D9BD5D002ACE4F /* Default@2x.png */,
+				D5C9864218D9BCC9002ACE4F /* Icon.png */,
+				D5C9864318D9BCC9002ACE4F /* Icon@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5F8617717902B5C0024F10D /* res */ = {
+			isa = PBXGroup;
+			children = (
+				D56689A41816BAC000034273 /* xor.lua */,
+				D56689A51816BAC000034273 /* main.lua */,
+				D56689A61816BAC000034273 /* digits.lua */,
+				D571F0C918D87F2E0032CC7C /* Attributions.txt */,
+				D5F8617817902B5C0024F10D /* cover.jpg */,
+				D5F8617D17902B5C0024F10D /* mnist.neuralnetwork */,
+				D5F8617E17902B5C0024F10D /* mnist_ascii.neuralnetwork */,
+				D5F8618317902B5C0024F10D /* xor.neuralnetwork */,
+				D5F8617917902B5C0024F10D /* custom3_1.png */,
+				D5F8617A17902B5C0024F10D /* custom5_1.png */,
+				D5F8617B17902B5C0024F10D /* custom8_1.png */,
+				D5F8617C17902B5C0024F10D /* custom8_2.png */,
+				D5F8618017902B5C0024F10D /* test4.png */,
+				D5F8618117902B5C0024F10D /* test5.png */,
+				D5F8618217902B5C0024F10D /* test7.png */,
+			);
+			name = res;
+			path = DemoApp/res;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D53BCAB4178C2BDE00DF6373 /* Recognzr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53BCAD8178C2BDE00DF6373 /* Build configuration list for PBXNativeTarget "Recognzr" */;
+			buildPhases = (
+				D53BCAB1178C2BDE00DF6373 /* Sources */,
+				D53BCAB2178C2BDE00DF6373 /* Frameworks */,
+				D53BCAB3178C2BDE00DF6373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recognzr;
+			productName = NNTest;
+			productReference = D53BCAB5178C2BDE00DF6373 /* Recognzr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D53BCAAD178C2BDE00DF6373 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Samuel Wejéus";
+				TargetAttributes = {
+					D53BCAB4178C2BDE00DF6373 = {
+						DevelopmentTeam = TPWEY3KE9V;
+					};
+				};
+			};
+			buildConfigurationList = D53BCAB0178C2BDE00DF6373 /* Build configuration list for PBXProject "Recognzr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D53BCAAC178C2BDE00DF6373;
+			productRefGroup = D53BCAB6178C2BDE00DF6373 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D53BCAB4178C2BDE00DF6373 /* Recognzr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D53BCAB3178C2BDE00DF6373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D571F1CB18D886520032CC7C /* DataList.lua in Resources */,
+				D571F1B918D886520032CC7C /* SpatialMaxPooling.lua in Resources */,
+				D53BCAC3178C2BDE00DF6373 /* InfoPlist.strings in Resources */,
+				D571F19718D886520032CC7C /* MarginRankingCriterion.lua in Resources */,
+				D571F19F18D886520032CC7C /* MultiLabelMarginCriterion.lua in Resources */,
+				D571F1B518D886520032CC7C /* SpatialDivisiveNormalization.lua in Resources */,
+				D571F18A18D886520032CC7C /* HingeEmbeddingCriterion.lua in Resources */,
+				D571F1B318D886520032CC7C /* SpatialConvolutionMap.lua in Resources */,
+				D5F8618417902B5C0024F10D /* cover.jpg in Resources */,
+				D5C9864518D9BCC9002ACE4F /* 4-dark-background@2x.jpg in Resources */,
+				D571F1DB18D886520032CC7C /* SpatialMatching.lua in Resources */,
+				D5F8618517902B5C0024F10D /* custom3_1.png in Resources */,
+				D571F1A818D886520032CC7C /* Select.lua in Resources */,
+				D5F8618617902B5C0024F10D /* custom5_1.png in Resources */,
+				D571F1A318D886520032CC7C /* Parallel.lua in Resources */,
+				D571F19218D886520032CC7C /* Log.lua in Resources */,
+				D571F19518D886520032CC7C /* LookupTable.lua in Resources */,
+				D5F8618717902B5C0024F10D /* custom8_1.png in Resources */,
+				D5C9864F18D9BCC9002ACE4F /* draw-arrow@2x.png in Resources */,
+				D5C9865018D9BCC9002ACE4F /* icon-flash.png in Resources */,
+				D571F19D18D886520032CC7C /* Mul.lua in Resources */,
+				D571F17718D886520032CC7C /* CDivTable.lua in Resources */,
+				D571F1BB18D886520032CC7C /* SpatialSubtractiveNormalization.lua in Resources */,
+				D571F18618D886520032CC7C /* Exp.lua in Resources */,
+				D571F1D118D886520032CC7C /* FunctionWrapper.lua in Resources */,
+				D571F1D718D886520032CC7C /* SpatialDownSampling.lua in Resources */,
+				D571F1AF18D886520032CC7C /* SoftSign.lua in Resources */,
+				D571F1D418D886520032CC7C /* SparseCriterion.lua in Resources */,
+				D571F1A518D886520032CC7C /* Power.lua in Resources */,
+				D571F1E718D886520032CC7C /* Tic.lua in Resources */,
+				D571F1B418D886520032CC7C /* SpatialConvolutionMM.lua in Resources */,
+				D571F1EC18D886520032CC7C /* init.lua in Resources */,
+				D56689A91816BAC000034273 /* digits.lua in Resources */,
+				D571F1CE18D886520032CC7C /* DataSetSamplingPascal.lua in Resources */,
+				D571F1DD18D886520032CC7C /* SpatialNormalization.lua in Resources */,
+				D5F8618817902B5C0024F10D /* custom8_2.png in Resources */,
+				D5C9864818D9BCC9002ACE4F /* blackButtonHighlight.png in Resources */,
+				D571F17E18D886520032CC7C /* CosineDistance.lua in Resources */,
+				D571F17D18D886520032CC7C /* Copy.lua in Resources */,
+				D5C9864C18D9BCC9002ACE4F /* Default.png in Resources */,
+				D571F17A18D886520032CC7C /* CMulTable.lua in Resources */,
+				D55BB7E31816B994006B6624 /* MainStoryboard.storyboard in Resources */,
+				D571F1CD18D886520032CC7C /* DataSetLabelMe.lua in Resources */,
+				D571F1D018D886520032CC7C /* DistNLLCriterion.lua in Resources */,
+				D571F1BE18D886520032CC7C /* Sqrt.lua in Resources */,
+				D571F1AD18D886520032CC7C /* SoftPlus.lua in Resources */,
+				D5C9864418D9BCC9002ACE4F /* 4-dark-background.jpg in Resources */,
+				D5F8618917902B5C0024F10D /* mnist.neuralnetwork in Resources */,
+				D571F1E918D886520032CC7C /* CmdLine.lua in Resources */,
+				D571F18D18D886520032CC7C /* Jacobian.lua in Resources */,
+				D571F1AC18D886520032CC7C /* SoftMin.lua in Resources */,
+				D571F17F18D886520032CC7C /* CosineEmbeddingCriterion.lua in Resources */,
+				D5F8618A17902B5C0024F10D /* mnist_ascii.neuralnetwork in Resources */,
+				D571F1B718D886520032CC7C /* SpatialFullConvolutionMap.lua in Resources */,
+				D571F18818D886520032CC7C /* HardTanh.lua in Resources */,
+				D5F8618C17902B5C0024F10D /* test4.png in Resources */,
+				D571F18018D886520032CC7C /* Criterion.lua in Resources */,
+				D571F1E318D886520032CC7C /* SpatialReSamplingEx.lua in Resources */,
+				D571F1BA18D886520032CC7C /* SpatialSubSampling.lua in Resources */,
+				D5F8618D17902B5C0024F10D /* test5.png in Resources */,
+				D571F19118D886520032CC7C /* Linear.lua in Resources */,
+				D571F1AB18D886520032CC7C /* SoftMax.lua in Resources */,
+				D571F1C518D886520032CC7C /* TemporalMaxPooling.lua in Resources */,
+				D571F1E218D886520032CC7C /* SpatialReSampling.lua in Resources */,
+				D571F1C018D886520032CC7C /* StochasticGradient.lua in Resources */,
+				D571F18B18D886520032CC7C /* Identity.lua in Resources */,
+				D571F1B218D886520032CC7C /* SpatialConvolution.lua in Resources */,
+				D571F1E818D886520032CC7C /* Toc.lua in Resources */,
+				D5C9864718D9BCC9002ACE4F /* blackButton@2x.png in Resources */,
+				D5F8618E17902B5C0024F10D /* test7.png in Resources */,
+				D571F1BF18D886520032CC7C /* Square.lua in Resources */,
+				D571F19C18D886520032CC7C /* MSECriterion.lua in Resources */,
+				D571F1C418D886520032CC7C /* TemporalConvolution.lua in Resources */,
+				D571F1D518D886520032CC7C /* SpatialClassifier.lua in Resources */,
+				D571F1E018D886520032CC7C /* SpatialRadialMatching.lua in Resources */,
+				D571F1C718D886520032CC7C /* Threshold.lua in Resources */,
+				D571F17C18D886520032CC7C /* ConcatTable.lua in Resources */,
+				D571F18318D886520032CC7C /* DistKLDivCriterion.lua in Resources */,
+				D571F1CF18D886520032CC7C /* DistMarginCriterion.lua in Resources */,
+				D5C9865818D9BE50002ACE4F /* Images.xcassets in Resources */,
+				D571F17818D886520032CC7C /* ClassNLLCriterion.lua in Resources */,
+				D571F1D918D886520032CC7C /* SpatialGraph.lua in Resources */,
+				D571F0CC18D886430032CC7C /* framework in Resources */,
+				D571F1A418D886520032CC7C /* ParallelTable.lua in Resources */,
+				D571F1ED18D886520032CC7C /* random.lua in Resources */,
+				D571F1C618D886520032CC7C /* TemporalSubSampling.lua in Resources */,
+				D571F1A618D886520032CC7C /* Replicate.lua in Resources */,
+				D56689A81816BAC000034273 /* main.lua in Resources */,
+				D571F1BC18D886520032CC7C /* SpatialZeroPadding.lua in Resources */,
+				D5F8618F17902B5C0024F10D /* xor.neuralnetwork in Resources */,
+				D571F17218D886520032CC7C /* init.lua in Resources */,
+				D56689A71816BAC000034273 /* xor.lua in Resources */,
+				D571F18218D886520032CC7C /* CSubTable.lua in Resources */,
+				D5C9864918D9BCC9002ACE4F /* blackButtonHighlight@2x.png in Resources */,
+				D571F1CC18D886520032CC7C /* DataSet.lua in Resources */,
+				D5F861911790405E0024F10D /* res in Resources */,
+				D571F19A18D886520032CC7C /* Min.lua in Resources */,
+				D571F16E18D886520032CC7C /* init.lua in Resources */,
+				D571F18F18D886520032CC7C /* L1Cost.lua in Resources */,
+				D571F1B618D886520032CC7C /* SpatialFullConvolution.lua in Resources */,
+				D571F1EF18D886520032CC7C /* TensorMath.lua in Resources */,
+				D571F17018D886520032CC7C /* search.lua in Resources */,
+				D571F17118D886520032CC7C /* init.lua in Resources */,
+				D571F1F018D886520032CC7C /* Tester.lua in Resources */,
+				D5C9864B18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed@2x.png in Resources */,
+				D571F1E518D886520032CC7C /* SpatialUpSampling.lua in Resources */,
+				D571F19018D886520032CC7C /* L1HingeEmbeddingCriterion.lua in Resources */,
+				D571F1A918D886520032CC7C /* Sequential.lua in Resources */,
+				D571F19B18D886520032CC7C /* Module.lua in Resources */,
+				D571F1C118D886520032CC7C /* Sum.lua in Resources */,
+				D571F1D818D886520032CC7C /* SpatialFovea.lua in Resources */,
+				D571F1D218D886520032CC7C /* init.lua in Resources */,
+				D5C9865318D9BCC9002ACE4F /* Icon@2x.png in Resources */,
+				D571F1CA18D886520032CC7C /* WeightedMSECriterion.lua in Resources */,
+				D571F1B018D886520032CC7C /* SparseLinear.lua in Resources */,
+				D571F1A118D886520032CC7C /* Narrow.lua in Resources */,
+				D5C9865118D9BCC9002ACE4F /* icon-flash@2x.png in Resources */,
+				D571F1C818D886520032CC7C /* VolumetricConvolution.lua in Resources */,
+				D571F0CA18D87F2E0032CC7C /* Attributions.txt in Resources */,
+				D571F19818D886520032CC7C /* Max.lua in Resources */,
+				D571F18418D886520032CC7C /* DotProduct.lua in Resources */,
+				D571F18918D886520032CC7C /* hessian.lua in Resources */,
+				D571F1A218D886520032CC7C /* PairwiseDistance.lua in Resources */,
+				D571F1AA18D886520032CC7C /* Sigmoid.lua in Resources */,
+				D571F1A018D886520032CC7C /* MultiMarginCriterion.lua in Resources */,
+				D571F1DA18D886520032CC7C /* SpatialLinear.lua in Resources */,
+				D571F1EA18D886520032CC7C /* File.lua in Resources */,
+				D571F1E118D886520032CC7C /* SpatialRecursiveFovea.lua in Resources */,
+				D571F1EB18D886520032CC7C /* hist.lua in Resources */,
+				D571F1B818D886520032CC7C /* SpatialLPPooling.lua in Resources */,
+				D571F1E618D886520032CC7C /* SuperCriterion.lua in Resources */,
+				D571F1B118D886520032CC7C /* SpatialContrastiveNormalization.lua in Resources */,
+				D571F1DC18D886520032CC7C /* SpatialMaxSampling.lua in Resources */,
+				D571F1DF18D886520032CC7C /* SpatialPyramid.lua in Resources */,
+				D571F1BD18D886520032CC7C /* SplitTable.lua in Resources */,
+				D571F17918D886520032CC7C /* CMul.lua in Resources */,
+				D571F19318D886520032CC7C /* LogSigmoid.lua in Resources */,
+				D571F1C918D886520032CC7C /* WeightedEuclidean.lua in Resources */,
+				D571F19418D886520032CC7C /* LogSoftMax.lua in Resources */,
+				D571F1C218D886520032CC7C /* Tanh.lua in Resources */,
+				D571F17418D886520032CC7C /* AbsCriterion.lua in Resources */,
+				D571F1AE18D886520032CC7C /* SoftShrink.lua in Resources */,
+				D571F1A718D886520032CC7C /* Reshape.lua in Resources */,
+				D571F1EE18D886520032CC7C /* Tensor.lua in Resources */,
+				D571F1DE18D886520032CC7C /* SpatialPadding.lua in Resources */,
+				D571F1C318D886520032CC7C /* TanhShrink.lua in Resources */,
+				D5C9864618D9BCC9002ACE4F /* blackButton.png in Resources */,
+				D571F1D618D886520032CC7C /* SpatialColorTransform.lua in Resources */,
+				D571F18718D886520032CC7C /* HardShrink.lua in Resources */,
+				D571F17318D886520032CC7C /* Abs.lua in Resources */,
+				D571F18118D886520032CC7C /* CriterionTable.lua in Resources */,
+				D571F18E18D886520032CC7C /* JoinTable.lua in Resources */,
+				D571F18518D886520032CC7C /* Euclidean.lua in Resources */,
+				D571F17618D886520032CC7C /* CAddTable.lua in Resources */,
+				D571F19618D886520032CC7C /* MarginCriterion.lua in Resources */,
+				D571F17B18D886520032CC7C /* Concat.lua in Resources */,
+				D571F1D318D886520032CC7C /* Probe.lua in Resources */,
+				D571F1E418D886520032CC7C /* SpatialSparseCriterion.lua in Resources */,
+				D571F19918D886520032CC7C /* Mean.lua in Resources */,
+				D5C9865518D9BD5D002ACE4F /* Default@2x.png in Resources */,
+				D571F16F18D886520032CC7C /* inline.lua in Resources */,
+				D571F19E18D886520032CC7C /* MultiCriterion.lua in Resources */,
+				D571F18C18D886520032CC7C /* init.lua in Resources */,
+				D5C9864E18D9BCC9002ACE4F /* draw-arrow.png in Resources */,
+				D5C9865218D9BCC9002ACE4F /* Icon.png in Resources */,
+				D5C9864A18D9BCC9002ACE4F /* camera-ui-camera-button-dimmed.png in Resources */,
+				D571F17518D886520032CC7C /* Add.lua in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D53BCAB1178C2BDE00DF6373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56AED0A1816B43E00C0A585 /* DrawViewController.m in Sources */,
+				D571F22C18D887480032CC7C /* THTensorMath.c in Sources */,
+				D56AED0B1816B43E00C0A585 /* ImageProcessor.mm in Sources */,
+				D571F22918D887480032CC7C /* THTensorConv.c in Sources */,
+				D53BCAC5178C2BDE00DF6373 /* main.m in Sources */,
+				D571F22B18D887480032CC7C /* THTensorLapack.c in Sources */,
+				D56689AD1816BC0400034273 /* GLESImageView.mm in Sources */,
+				D571F22D18D887480032CC7C /* THTensorRandom.c in Sources */,
+				D571F22418D887480032CC7C /* THBlas.c in Sources */,
+				D56AED0E1816B43E00C0A585 /* LineDrawingView.m in Sources */,
+				D571F22818D887480032CC7C /* THTensor.c in Sources */,
+				D56AED0C1816B43E00C0A585 /* CameraViewController.mm in Sources */,
+				D571F23018D88AA20032CC7C /* Torch.h in Sources */,
+				D571F22E18D887480032CC7C /* THVector.c in Sources */,
+				D571F22518D887480032CC7C /* THLapack.c in Sources */,
+				D571F22718D887480032CC7C /* THStorageCopy.c in Sources */,
+				D571F22618D887480032CC7C /* THStorage.c in Sources */,
+				D57F38F817A2987600BFD86C /* EEToolbarCenterButtonOverlay.m in Sources */,
+				D571F22A18D887480032CC7C /* THTensorCopy.c in Sources */,
+				D571F22F18D88A860032CC7C /* Torch.m in Sources */,
+				D56AED191816B43E00C0A585 /* StartupViewController.m in Sources */,
+				D56AED131816B43E00C0A585 /* InfoViewController.m in Sources */,
+				D56AED181816B43E00C0A585 /* AppVars.m in Sources */,
+				D56AED151816B43E00C0A585 /* ViewController.m in Sources */,
+				D57F390317A29BC500BFD86C /* UIToolbar+EEToolbarCenterButton.m in Sources */,
+				D571F25A18D89F430032CC7C /* DBTileButton.m in Sources */,
+				D56AED0D1816B43E00C0A585 /* AppDelegate.mm in Sources */,
+				D571F0C818D87EBE0032CC7C /* AttributionsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D53BCAC1178C2BDE00DF6373 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D53BCAC2178C2BDE00DF6373 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D55BB7E11816B994006B6624 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55BB7E21816B994006B6624 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D53BCAD6178C2BDE00DF6373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
+			};
+			name = Debug;
+		};
+		D53BCAD7178C2BDE00DF6373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
+			};
+			name = Release;
+		};
+		D53BCAD9178C2BDE00DF6373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Samuel Wejeus (64A2DYQN4E)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/framework/lib",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoApp/Recognzr-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/framework/include";
+				INFOPLIST_FILE = "DemoApp/Recognzr-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/framework/lib",
+					"\"$(SRCROOT)/OpenCV/opencv_device/lib\"",
+					"\"$(SRCROOT)/OpenCV/opencv_simulator/lib\"",
+					"\"$(SRCROOT)/OpenCV/lib/Debug\"",
+					"\"$(SRCROOT)/OpenCV/lib/Release\"",
+					"$(PROJECT_DIR)/framework/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Recognzr;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D53BCADA178C2BDE00DF6373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Samuel Wejeus (64A2DYQN4E)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/framework/lib",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoApp/Recognzr-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/framework/include";
+				INFOPLIST_FILE = "DemoApp/Recognzr-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/framework/lib",
+					"\"$(SRCROOT)/OpenCV/opencv_device/lib\"",
+					"\"$(SRCROOT)/OpenCV/opencv_simulator/lib\"",
+					"\"$(SRCROOT)/OpenCV/lib/Debug\"",
+					"\"$(SRCROOT)/OpenCV/lib/Release\"",
+					"$(PROJECT_DIR)/framework/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Recognzr;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D53BCAB0178C2BDE00DF6373 /* Build configuration list for PBXProject "Recognzr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53BCAD6178C2BDE00DF6373 /* Debug */,
+				D53BCAD7178C2BDE00DF6373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D53BCAD8178C2BDE00DF6373 /* Build configuration list for PBXNativeTarget "Recognzr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53BCAD9178C2BDE00DF6373 /* Debug */,
+				D53BCADA178C2BDE00DF6373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D53BCAAD178C2BDE00DF6373 /* Project object */;
+}
