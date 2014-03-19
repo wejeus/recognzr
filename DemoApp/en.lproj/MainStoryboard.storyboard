@@ -257,6 +257,8 @@ Cg
 Bontouch Research Labs
 
 This prototype is a proof-of-concept for intelligent machine learning using deep learning applied to offline recognition of arbitrary symbols. Prototype is trained to recognize numerical digits (0-9) but the technology is symbol agnostic.
+
+Current limitations: the classifier assumes input is binary. The classification engine does not perform any intelligent background/foreground separation and preprocessing is performed using only thresholding and sample erosion. This could result in degraded performance for colored samples.
 </string>
                                     <attributes>
                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

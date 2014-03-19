@@ -76,10 +76,13 @@ BOOL isShowingResultView = NO;
     
     UIImage *image;
     NSMutableArray *flatImage;
+    int err = 0;
     
     if (useCameraImage) {
         image = [self.cameraImage image];
-        cv::Mat mat = [self.imageProcessor preprocessCamera:image];
+        cv::Mat mat;
+        err = [self.imageProcessor preprocessCamera:image toMat:&mat];
+        
         flatImage = [self.imageProcessor cvMat2MutableArray:&mat];
         
         //debug
@@ -90,7 +93,8 @@ BOOL isShowingResultView = NO;
         }
         
         image = [drawScreen getUIImage];
-        cv::Mat mat = [self.imageProcessor preprocess:image];
+        cv::Mat mat;
+        err = [self.imageProcessor preprocess:image toMat:&mat];
         flatImage = [self.imageProcessor cvMat2MutableArray:&mat];
     }
 
@@ -100,18 +104,24 @@ BOOL isShowingResultView = NO;
     animation.duration = 0.6;
     [self.resultLabel.layer addAnimation:animation forKey:nil];
     
+    int determinedClass = -1;
+    if (!err) {
+        determinedClass = [self.torch performClassification:flatImage];
+    }
     
-    int ret = [self.torch performClassification:flatImage];
-    
-    NSLog(@"result: %d", ret);
+    NSLog(@"result: %d", determinedClass);
 
     [self showView:RESULT_VIEW];
-    self.resultLabel.text = [NSString stringWithFormat:@"%d", ret];
     
+    if (err) {
+        self.resultLabel.text = [NSString stringWithFormat:@"%@", @"?"];
+    } else {
+        self.resultLabel.text = [NSString stringWithFormat:@"%d", determinedClass];
+    }
+
     [drawScreen reset];
     useCameraImage = NO;
 
-    
 //    [self useDebugData:flatImage result:ret];
 }
 

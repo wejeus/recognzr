@@ -22,8 +22,7 @@
         unsigned char* inp  = mat->ptr<unsigned char>(row); // check this if correct type!
         
         for (int col = 0; col < mat->cols; ++col) {
-            // we also invert (the 255 - *inp part) image since some idiot (acidentally) trained the network on inverted images..
-            [sample setObject:@(255 - *inp) atIndexedSubscript:flatIndex];
+            [sample setObject:@(255 - *inp) atIndexedSubscript:flatIndex]; // training was preformed on inverted grayscale images -> convert to match
             *inp++;
             flatIndex++;
         }
@@ -37,7 +36,8 @@
     UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil);
 }
 
-- (cv::Mat) preprocess:(UIImage *) image {
+// Preprocess for handdrawn sample
+- (int) preprocess:(UIImage *) image toMat:(cv::Mat*)processedImage {
     
     Mat imageMat1 = [self cvMatFromUIImage:image];
     Mat imageMat = imageMat1.clone();
@@ -51,13 +51,14 @@
     mach_timebase_info(&timeBaseInfo);
     startTime = mach_absolute_time();
     
-
-
-    
 //    Mat *processedImage = new Mat(imageMat);
     cvtColor(imageMat, imageMat, CV_BGR2GRAY);
 
     cv::Rect boundingBox = [self findBoundingBox:imageMat];
+    if (boundingBox.area() == 0) {
+        return 1;
+    }
+    
     int widthDiff = boundingBox.width/4.5f;
     int heightDiff = boundingBox.height/4.5f;
     int diff = -1;
@@ -73,7 +74,7 @@
 
     // convert to correct size
     cv::Size acceptedSize(32,32);
-    resize(finishedFrame, finishedFrame, acceptedSize, 0, 0, cv::INTER_CUBIC);
+    resize(finishedFrame, *processedImage, acceptedSize, 0, 0, cv::INTER_CUBIC);
     
     // measure time
     endTime = mach_absolute_time();
@@ -81,9 +82,10 @@
     elapsedTimeNano = elapsedTime * timeBaseInfo.numer / timeBaseInfo.denom;
     printf("pre-process time: %f\n", ((float) elapsedTimeNano)/1000000000);
     
-    return finishedFrame;
+    return 0;
 }
 
+// If nothing no good candidate is found return Rect with area 0
 -(cv::Rect) findBoundingBox:(Mat &) image {
     std::vector<vector<cv::Point> > contourContainer;
     vector<Vec4i> hierarchy;
@@ -92,9 +94,14 @@
     Mat m = image.clone();
     findContours(m, contourContainer, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
     
+    if (contourContainer.size() == 0) {
+        NSLog(@"Could not find any bounding box!");
+        return cv::Rect(0,0,0,0);
+    }
+    
     // Finds the contour with the largest area
     int area = 0;
-    int idx;
+    int idx = 0;
     for(int i = 0; i < contourContainer.size(); i++) {
         if(area < contourContainer[i].size())
             idx = i;
@@ -104,8 +111,9 @@
     return boundingBox;
 }
 
+// Preprocess for sample captured from camera
 /* WORK IN PROGRESS */
-- (cv::Mat) preprocessCamera:(UIImage *)image {
+- (int) preprocessCamera:(UIImage *)image toMat:(cv::Mat*)processedImage {
     NSLog(@"preprocessCamera");
     
     // measure time
@@ -131,6 +139,10 @@
     erode(imageMat, imageMat, erosionElement);
 
     cv::Rect boundingBox = [self findBoundingBox:imageMat];
+    if (boundingBox.area() == 0) {
+        return 1;
+    }
+    
     int widthDiff = boundingBox.width/4.5f;
     int heightDiff = boundingBox.height/4.5f;
     int diff = -1;
@@ -145,10 +157,9 @@
     cv::Mat finishedFrame;
     cv::copyMakeBorder(roi, finishedFrame, diff, diff, diff, diff, cv::BORDER_CONSTANT, Scalar(255,255,255));
 
-
     // convert to correct size
     cv::Size acceptedSize(32,32);
-    resize(finishedFrame, finishedFrame, acceptedSize, 0, 0, cv::INTER_CUBIC);
+    resize(finishedFrame, *processedImage, acceptedSize, 0, 0, cv::INTER_CUBIC);
     
     // measure time
     endTime = mach_absolute_time();
@@ -156,7 +167,7 @@
     elapsedTimeNano = elapsedTime * timeBaseInfo.numer / timeBaseInfo.denom;
     printf("pre-process time: %f\n", ((float) elapsedTimeNano)/1000000000);
     
-    return finishedFrame;
+    return 0;
 }
 
 
@@ -179,7 +190,6 @@
     
     CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
     CGContextRelease(contextRef);
-    CGColorSpaceRelease(colorSpace);
     
     return cvMat;
 }

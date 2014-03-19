@@ -15,8 +15,8 @@ using namespace cv;
 @interface ImageProcessor : NSObject
 
 - (NSMutableArray *) cvMat2MutableArray:(cv::Mat *) mat;
-- (cv::Mat) preprocess:(UIImage *)image;
-- (cv::Mat) preprocessCamera:(UIImage *)image;
+- (int) preprocess:(UIImage *) image toMat:(cv::Mat*)processedImage;
+- (int) preprocessCamera:(UIImage *)image toMat:(cv::Mat*)processedImage;
 - (Mat) cvMatFromUIImage:(UIImage *)image;
 - (UIImage *) UIImageFromCVMat:(Mat)cvMat;
 
