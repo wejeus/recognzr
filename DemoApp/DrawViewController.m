@@ -80,10 +80,12 @@ BOOL isShowingResultView = NO;
     
     if (useCameraImage) {
         image = [self.cameraImage image];
-        cv::Mat mat;
-        err = [self.imageProcessor preprocessCamera:image toMat:&mat];
         
-        flatImage = [self.imageProcessor cvMat2MutableArray:&mat];
+        cv::Mat mat;
+//        for (int i = 0; i < 10; ++i) {
+            err = [self.imageProcessor preprocessCamera:image toMat:&mat];
+            flatImage = [self.imageProcessor cvMat2MutableArray:&mat];
+//        }
         
         //debug
         [self.cameraImage setImage:[self.imageProcessor UIImageFromCVMat:mat]];
@@ -93,9 +95,12 @@ BOOL isShowingResultView = NO;
         }
         
         image = [drawScreen getUIImage];
+        
         cv::Mat mat;
-        err = [self.imageProcessor preprocess:image toMat:&mat];
-        flatImage = [self.imageProcessor cvMat2MutableArray:&mat];
+//        for (int i = 0; i < 10; ++i) {
+            err = [self.imageProcessor preprocess:image toMat:&mat];
+            flatImage = [self.imageProcessor cvMat2MutableArray:&mat];
+//        }
     }
 
     // Add fade in/out animation
@@ -106,7 +111,17 @@ BOOL isShowingResultView = NO;
     
     int determinedClass = -1;
     if (!err) {
-        determinedClass = [self.torch performClassification:flatImage];
+        for (int i = 0; i < 10; ++i) {
+
+            uint64_t start = getUptimeInNanoseconds2(); // for measure time
+        
+            determinedClass = [self.torch performClassification:flatImage];
+            
+            // for measure time
+            uint64_t end = getUptimeInNanoseconds2();
+            uint64_t elapsedTimeMilli = end - start;
+            printf("classification time: %f\n", ((float) elapsedTimeMilli)/(1000*1000*1000));
+        }
     }
     
     NSLog(@"result: %d", determinedClass);
@@ -123,6 +138,17 @@ BOOL isShowingResultView = NO;
     useCameraImage = NO;
 
 //    [self useDebugData:flatImage result:ret];
+}
+
+uint64_t getUptimeInNanoseconds2() {
+    static mach_timebase_info_data_t s_timebase_info;
+    
+    if (s_timebase_info.denom == 0) {
+        (void) mach_timebase_info(&s_timebase_info);
+    }
+    
+    // mach_absolute_time() returns billionth of seconds,
+    return mach_absolute_time() * s_timebase_info.numer / s_timebase_info.denom;
 }
 
 - (void) useDebugData:(NSMutableArray *) flatImage result:(int)res {

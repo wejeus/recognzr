@@ -36,6 +36,17 @@
     UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil);
 }
 
+uint64_t getUptimeInNanoseconds() {
+    static mach_timebase_info_data_t s_timebase_info;
+    
+    if (s_timebase_info.denom == 0) {
+        (void) mach_timebase_info(&s_timebase_info);
+    }
+    
+    // mach_absolute_time() returns billionth of seconds,
+    return mach_absolute_time() * s_timebase_info.numer / s_timebase_info.denom;
+}
+
 // Preprocess for handdrawn sample
 - (int) preprocess:(UIImage *) image toMat:(cv::Mat*)processedImage {
     
@@ -43,15 +54,8 @@
     Mat imageMat = imageMat1.clone();
     
     // measure time
-    uint64_t startTime = 0;
-    uint64_t endTime = 0;
-    uint64_t elapsedTime = 0;
-    uint64_t elapsedTimeNano = 0;
-    mach_timebase_info_data_t timeBaseInfo;
-    mach_timebase_info(&timeBaseInfo);
-    startTime = mach_absolute_time();
+    uint64_t start = getUptimeInNanoseconds();
     
-//    Mat *processedImage = new Mat(imageMat);
     cvtColor(imageMat, imageMat, CV_BGR2GRAY);
 
     cv::Rect boundingBox = [self findBoundingBox:imageMat];
@@ -77,10 +81,9 @@
     resize(finishedFrame, *processedImage, acceptedSize, 0, 0, cv::INTER_CUBIC);
     
     // measure time
-    endTime = mach_absolute_time();
-    elapsedTime = endTime - startTime;
-    elapsedTimeNano = elapsedTime * timeBaseInfo.numer / timeBaseInfo.denom;
-    printf("pre-process time: %f\n", ((float) elapsedTimeNano)/1000000000);
+    uint64_t end = getUptimeInNanoseconds();
+    uint64_t elapsedTimeMilli = end - start;
+    printf("pre-process time: %f\n", ((float) elapsedTimeMilli)/(1000*1000*1000));
     
     return 0;
 }
@@ -117,13 +120,7 @@
     NSLog(@"preprocessCamera");
     
     // measure time
-    uint64_t startTime = 0;
-    uint64_t endTime = 0;
-    uint64_t elapsedTime = 0;
-    uint64_t elapsedTimeNano = 0;
-    mach_timebase_info_data_t timeBaseInfo;
-    mach_timebase_info(&timeBaseInfo);
-    startTime = mach_absolute_time();
+    uint64_t start = getUptimeInNanoseconds();
     
     Mat imageMat = [self cvMatFromUIImage:image];
     
@@ -153,7 +150,6 @@
     }
     
     cv::Mat roi = (imageMat)(boundingBox);
-//    cv::Mat *capturedFrame = new Mat();
     cv::Mat finishedFrame;
     cv::copyMakeBorder(roi, finishedFrame, diff, diff, diff, diff, cv::BORDER_CONSTANT, Scalar(255,255,255));
 
@@ -162,10 +158,9 @@
     resize(finishedFrame, *processedImage, acceptedSize, 0, 0, cv::INTER_CUBIC);
     
     // measure time
-    endTime = mach_absolute_time();
-    elapsedTime = endTime - startTime;
-    elapsedTimeNano = elapsedTime * timeBaseInfo.numer / timeBaseInfo.denom;
-    printf("pre-process time: %f\n", ((float) elapsedTimeNano)/1000000000);
+    uint64_t end = getUptimeInNanoseconds();
+    uint64_t elapsedTimeMilli = end - start;
+    printf("pre-process time: %f\n", ((float) elapsedTimeMilli)/(1000*1000*1000));
     
     return 0;
 }
